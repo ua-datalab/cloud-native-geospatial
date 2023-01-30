@@ -1,11 +1,11 @@
 site_name: Cloud Native Data Workshop
-site_description: AGIC 2022 Cloud Native Data Workship
-site_author: Tyson Lee Swetnam
-site_url: https://tyson-swetnam.github.io/agic-2022/
+site_description: Cloud Native Data Workship
+site_author: Jeffrey Gillan
+site_url: https://www.gillanscience.com/cloud_native_geospatial
 
 # Repository
-repo_name: agic-2022
-repo_url: https://github.com/tyson-swetnam/agic-2022
+repo_name: cloud_native_geospatial
+repo_url: https://github.com/jeffgillan/cloud_native_geospatial
 edit_uri: edit/main/docs/
 # Copyright
 copyright: 'License CC by 4.0'
@@ -75,11 +75,8 @@ theme:
     logo: material/cloud-braces
 
 # Options
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/tyson-swetnam/agic-2022.git
 
+      
 extra_css:
   - stylesheets/extra.css
 
