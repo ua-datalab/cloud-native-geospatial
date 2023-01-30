@@ -1,11 +1,11 @@
 site_name: Cloud Native Data Workshop
 site_description: Cloud Native Data Workship
 site_author: Jeffrey Gillan
-site_url: https://jeffgillan.github.io/cloud_native_geospatial
+site_url: https://jeffgillan.github.io/cloud-native-geospatial
 
 # Repository
 repo_name: cloud_native_geospatial
-repo_url: https://github.com/jeffgillan/cloud_native_geospatial
+repo_url: https://github.com/jeffgillan/cloud-native-geospatial
 edit_uri: edit/main/docs/
 # Copyright
 copyright: 'License CC by 4.0'
