@@ -4,7 +4,7 @@ site_author: Jeffrey Gillan
 site_url: https://jeffgillan.github.io/cloud-native-geospatial
 
 # Repository
-repo_name: cloud_native_geospatial
+repo_name: cloud-native-geospatial
 repo_url: https://github.com/jeffgillan/cloud-native-geospatial
 edit_uri: edit/main/docs/
 # Copyright
