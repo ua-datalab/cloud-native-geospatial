@@ -2,6 +2,7 @@
 
 ## Overview of :material-layers: Cloud Optimized GeoTIFF (COG)
 
+<iframe width="1524" height="559" src="https://www.youtube.com/embed/uVOM8q8zNVk" title="Collins Ranch point cloud animation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### Background
 
