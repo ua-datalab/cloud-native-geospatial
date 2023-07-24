@@ -5,8 +5,8 @@
 #### Instructors(s): 
 
 [Tyson Lee Swetnam PhD](https://tysonswetnam.com/){target=_blank} [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](http://orcid.org/0000-0002-6639-7181){target=_blank},
-[Carlos Lizárraga-Celaya PhD](https://github.com/carloslizarragac){target=_blank} [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0002-0893-4268){target=_blank}
-
+[Carlos Lizárraga-Celaya PhD](https://github.com/carloslizarragac){target=_blank} [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0002-0893-4268){target=_blank},
+[Jeffrey Gillan PhD](http://www.gillanscience.com){target=_blank} [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](http://orcid.org/0000-0002-0731-3048){target=_blank}
 ## About
 
 This website follows the [FAIR](https://www.go-fair.org/fair-principles/){target=_blank} and [CARE](https://www.gida-global.org/care){target=_blank} data principles and hopes to help further open science. 
@@ -24,14 +24,52 @@ This website follows the [FAIR](https://www.go-fair.org/fair-principles/){target
 | [Hands on with Spatio-Temporal Asset Catalogs](stac.md) | 30 minutes | [STAC](https://stacspec.org/){target=_blank} | 
 | Summary and Conclusion | 5 minutes | | 
 
-## Pre-requisites
 
-* a laptop with an active wifi connection
-
-### helpful but not required
+### Helpful skills to have
 
 * a basic understanding of the [Command Line Interface (UNIX)](https://swcarpentry.github.io/shell-novice/){target=_blank}
 * a basic understanding of [Python3](https://www.geeksforgeeks.org/introduction-to-python3/#:~:text=Python%20is%20a%20high%2Dlevel,them%20readable%20all%20the%20time.){target=_blank}
+
+## Let's Use the Cloud!
+<figure markdown>
+  ![Image title](images/cloudy.gif){ width="500" }
+  <figcaption> The Cloud </figcaption>
+</figure>
+
+<figure markdown>
+  ![Image title](images/cloud_native.png){ width="300" }
+  <figcaption> </figcaption>
+</figure>
+
+<figure markdown>
+  ![Image title](images/cloud_graphic.png){ width="500" }
+  <figcaption> The Cloud </figcaption>
+</figure>
+
+
+<figure markdown>
+  ![Image title](images/data_store_logo.png){ width="200" }
+  <figcaption> </figcaption>
+</figure>
+
+
+<figure markdown>
+  ![Image title](images/s3_logo.png){ width="200" }
+  <figcaption> </figcaption>
+</figure>
+
+
+<figure markdown>
+  ![Image title](images/google_cloud_logo.png){ width="200" }
+  <figcaption> </figcaption>
+</figure>
+
+
+<figure markdown>
+  ![Image title](images/azure_logo.png){ width="200" }
+  <figcaption> </figcaption>
+</figure>
+
 
 
 ## Why "cloud native"?
@@ -80,8 +118,18 @@ The new approach to data sharing, focused on object storage rather than file dow
 
 ---
 
-## Light reading
+## Resources  
+
+[Cloud-Native Geospatial Outreach Event - April 2022 - from Open Geospatial Consortium (OGS)](https://www.youtube.com/watch?v=hprPIr9Vt4M&list=PLQsQNjNIDU87yUFyKy1seaiRps389RPwk){target=_blank}
+
+
+[Mapscaping Podcast on Cloud Native Geospatial](https://mapscaping.com/podcast/cloud-native-geospatial/){target=_blank}
+
 
 Gentemann, C. L., et al. (2021). “Science Storms the Cloud”. AGU Advances, 2, e2020AV000354. https://doi.org/10.1029/2020AV000354
 
 Abernathey, R. P.  et al. (2021) "Cloud-Native Repositories for Big Scientific Data," in Computing in Science & Engineering, vol. 23, no. 2, pp. 26-35, 1 March-April 2021, https://doi.org/10.1109/MCSE.2021.3059437
+
+
+
+
