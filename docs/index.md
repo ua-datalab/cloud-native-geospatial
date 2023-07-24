@@ -1,28 +1,28 @@
 [![license](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)](https://creativecommons.org/licenses/by/4.0/){target=_blank} 
 
-# :material-cloud-braces: Introduction to Cloud Native & Analysis Ready Data Formats
+# :material-cloud-braces: Introduction to Cloud Native Geospatial Formats
 
 #### Instructors(s): 
 
 [Tyson Lee Swetnam PhD](https://tysonswetnam.com/){target=_blank} [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](http://orcid.org/0000-0002-6639-7181){target=_blank},
 [Carlos Lizárraga-Celaya PhD](https://github.com/carloslizarragac){target=_blank} [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0002-0893-4268){target=_blank},
 [Jeffrey Gillan PhD](http://www.gillanscience.com){target=_blank} [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](http://orcid.org/0000-0002-0731-3048){target=_blank}
-## About
+
+## About This Content
+Welcome! This is an introductory course on Cloud Native Geospatial formats. Who is this course for?
+<br/> Here are the topics we will cover. 
+
+* [Define the Cloud and Cloud Native Formats](#lets-use-the-cloud)
+* [Why you should use Cloud Native Technologies](#why-cloud-native)
+* Vector formats such as [GeoJSON](geojson.md)
+* Raster formats such as [Cloud Optimized GeoTIFF (COG)](cog.md), [xarray](xarray.md), and [zarr](zarr.md)
+* Point cloud format [Cloud Optimized Point Cloud (COPC)](copc.md)
+* [SpatioTemporal Asset Catalogs (STAC)](stac.md)
+
+<br/>
+Each topic will contain conceptual descriptions of the formats, as well as hands-on exercises to create, use, and share them. 
 
 This website follows the [FAIR](https://www.go-fair.org/fair-principles/){target=_blank} and [CARE](https://www.gida-global.org/care){target=_blank} data principles and hopes to help further open science. 
-
-## Agenda
-
-| Lessons | Estimated Time to Complete | Link |
-|---------|----------------------------|------|
-| Introduction to Cloud Native Data Types | 15 minutes | [presentation](https://docs.google.com/presentation/d/1MXOqsIC5TzPB8GH-UweZp3BxGMFrj-qPdPCHSOlqbjU/edit?usp=sharing){target=_blank} |
-| [Hands on with GeoJSON](geojson.md) | 30 minutes | [GeoJSON.io](https://geojson.io){target=_blank} |
-| [Hands on with Cloud Optimized GeoTIFF](cog.md) | 30 minutes | [cogeo.org](https://cogeo.org){target=_blank} |
-| Break | 10 minutes | |
-| [Hands on with XArray & Zarr](xarray.md) | 30 minutes | [Xarray](https://docs.xarray.dev/en/stable/){target=_blank}, [Zarr](https://zarr.readthedocs.io/en/stable/){target=_blank} |
-| [Hands on with Cloud Optimized Point Clouds](copc.md) | 30 minutes | [COPC](https://copc.io/){target=_blank} |
-| [Hands on with Spatio-Temporal Asset Catalogs](stac.md) | 30 minutes | [STAC](https://stacspec.org/){target=_blank} | 
-| Summary and Conclusion | 5 minutes | | 
 
 
 ### Helpful skills to have
