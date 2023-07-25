@@ -2,14 +2,24 @@
 
 # :material-cloud-braces: Introduction to Cloud Native Geospatial Formats
 
+<figure markdown>
+  ![Image title](images/cloudy.gif){ width="300" }
+  <figcaption> </figcaption>
+</figure>
+
 #### Instructors(s): 
 
 [Tyson Lee Swetnam PhD](https://tysonswetnam.com/){target=_blank} [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](http://orcid.org/0000-0002-6639-7181){target=_blank},
 [Carlos Lizárraga-Celaya PhD](https://github.com/carloslizarragac){target=_blank} [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0002-0893-4268){target=_blank},
 [Jeffrey Gillan PhD](http://www.gillanscience.com){target=_blank} [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](http://orcid.org/0000-0002-0731-3048){target=_blank}
 
-## About This Content
-Welcome! This is an introductory course on Cloud Native Geospatial formats. Who is this course for?
+
+
+
+## About This Course
+Welcome! This is an introductory course on Cloud Native Geospatial formats. This course is for people that create, analyze, and share geospatial data. Throughout, we will emphasize Open Science principles such as [FAIR](https://www.go-fair.org/fair-principles/){target=_blank} and [CARE](https://www.gida-global.org/care){target=_blank}, and highlight primarily Open Source tools. 
+
+
 <br/> Here are the topics we will cover. 
 
 * [Define the Cloud and Cloud Native Formats](#lets-use-the-cloud)
@@ -22,27 +32,30 @@ Welcome! This is an introductory course on Cloud Native Geospatial formats. Who 
 <br/>
 Each topic will contain conceptual descriptions of the formats, as well as hands-on exercises to create, use, and share them. 
 
-This website follows the [FAIR](https://www.go-fair.org/fair-principles/){target=_blank} and [CARE](https://www.gida-global.org/care){target=_blank} data principles and hopes to help further open science. 
-
-
 ### Helpful skills to have
 
 * a basic understanding of the [Command Line Interface (UNIX)](https://swcarpentry.github.io/shell-novice/){target=_blank}
 * a basic understanding of [Python3](https://www.geeksforgeeks.org/introduction-to-python3/#:~:text=Python%20is%20a%20high%2Dlevel,them%20readable%20all%20the%20time.){target=_blank}
 
 ## Let's Use the Cloud!
-<figure markdown>
-  ![Image title](images/cloudy.gif){ width="500" }
-  <figcaption> The Cloud </figcaption>
-</figure>
+
+<img align="right" width="300" height="300" src="images/cloud_native.png">
+
+There are Cloud-native data formats and Cloud Computing
+
+We need to move away from the download model of obtaining and analzing geospatial data.
+
+Cloud-native formats are designed to be used in the cloud. They are built for http streaming.
+
+Users can view and analyze data without downloading the entire dataset.
+
+Data producers and share data through object storage and do not have to have specialized GIS servers or tilers. 
+
+<br/>
+<br/>
 
 <figure markdown>
-  ![Image title](images/cloud_native.png){ width="300" }
-  <figcaption> </figcaption>
-</figure>
-
-<figure markdown>
-  ![Image title](images/cloud_graphic.png){ width="500" }
+  ![Image title](images/cloud_graphic.png){ width="300" }
   <figcaption> The Cloud </figcaption>
 </figure>
 
