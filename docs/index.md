@@ -1,6 +1,6 @@
 [![license](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)](https://creativecommons.org/licenses/by/4.0/){target=_blank} 
 
-# :material-cloud-braces: Introduction to Cloud Native Geospatial Formats
+# :material-cloud-braces: Introduction to Cloud Native Geospatial
 
 <figure markdown>
   ![Image title](images/cloudy.gif){ width="300" }
@@ -17,7 +17,7 @@
 
 
 ## About This Course
-Welcome! This is an introductory course on Cloud Native Geospatial formats. This course is for people that create, analyze, and share geospatial data. Throughout, we will emphasize Open Science principles such as [FAIR](https://www.go-fair.org/fair-principles/){target=_blank} and [CARE](https://www.gida-global.org/care){target=_blank}, and highlight primarily Open Source tools. 
+Welcome! This is an introductory course on Cloud Native Geospatial. This course is for people that create, analyze, and share geospatial data. Throughout, we will emphasize Open Science principles such as [FAIR](https://www.go-fair.org/fair-principles/){target=_blank} and [CARE](https://www.gida-global.org/care){target=_blank}, and highlight primarily Open Source tools. 
 
 
 <br/> Here are the topics we will cover. 
