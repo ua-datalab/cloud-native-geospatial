@@ -17,101 +17,51 @@
 
 
 ## About This Course
-Welcome! This is an introductory course on Cloud Native Geospatial. This course is for people that create, analyze, and share geospatial data. Throughout, we will emphasize Open Science principles such as [FAIR](https://www.go-fair.org/fair-principles/){target=_blank} and [CARE](https://www.gida-global.org/care){target=_blank}, and highlight primarily Open Source tools. 
+Welcome! This is an introductory course on Cloud Native Geospatial. This course is for GIS professionals, researchers, remote sensing professionals, and anyone that creates, analyzes, and shares geospatial data. Throughout, we will emphasize Open Science principles such as [FAIR](https://www.go-fair.org/fair-principles/){target=_blank} and [CARE](https://www.gida-global.org/care){target=_blank}, and highlight primarily Open Source tools. 
 
 
 <br/> Here are the topics we will cover. 
 
-* [Define the Cloud and Cloud Native Formats](#lets-use-the-cloud)
-* [Why you should use Cloud Native Technologies](#why-cloud-native)
+* [An overview of Cloud Storage, Sharing, and Computing](#lets-use-the-cloud)
+* [Integrate Development Environments (IDEs)](ide.md)
 * Vector formats such as [GeoJSON](geojson.md)
 * Raster formats such as [Cloud Optimized GeoTIFF (COG)](cog.md), [xarray](xarray.md), and [zarr](zarr.md)
 * Point cloud format [Cloud Optimized Point Cloud (COPC)](copc.md)
 * [SpatioTemporal Asset Catalogs (STAC)](stac.md)
 
 <br/>
-Each topic will contain conceptual descriptions of the formats, as well as hands-on exercises to create, use, and share them. 
+Each topic will contain easy-to-understand descriptions, useful real-world examples, as well as hands-on exercises to create, use, and share cloud native formats. 
 
-### Helpful skills to have
+<br/>
+ Helpful skills to have
 
 * a basic understanding of the [Command Line Interface (UNIX)](https://swcarpentry.github.io/shell-novice/){target=_blank}
 * a basic understanding of [Python3](https://www.geeksforgeeks.org/introduction-to-python3/#:~:text=Python%20is%20a%20high%2Dlevel,them%20readable%20all%20the%20time.){target=_blank}
 
 ## Let's Use the Cloud!
 
-<img align="right" width="300" height="300" src="images/cloud_native.png">
+<img align="right" width="300" height="300" src="images/cloud_graphic.png">
 
-There are Cloud-native data formats and Cloud Computing
+GIS and Remote Sensing have become essential tools in many industries and fields of study. The amount of data being collected, analyzed, and available on the web is growing exponentially. So much so that the traditional model of downloading data to your individual desktop computers (for analysis and storage) is becoming a major limitation. 
 
-We need to move away from the download model of obtaining and analzing geospatial data.
-
-Cloud-native formats are designed to be used in the cloud. They are built for http streaming.
-
-Users can view and analyze data without downloading the entire dataset.
-
-Data producers and share data through object storage and do not have to have specialized GIS servers or tilers. 
-
-<br/>
-<br/>
-
-<figure markdown>
-  ![Image title](images/cloud_graphic.png){ width="300" }
-  <figcaption> The Cloud </figcaption>
-</figure>
+Cloud Native Geospatial aims to shift the 'Download' model by moving many aspects of data storage, sharing, and compute onto the web using cloud infrastructure. These advances hold the potential to foster collaborations, promote data-driven discovery, drive scientific innovation, increase transparency and improve reproducibility.
 
 
-<figure markdown>
-  ![Image title](images/data_store_logo.png){ width="200" }
-  <figcaption> </figcaption>
-</figure>
+<img align="right" width="300" height="300" src="images/cloud_storage.png">
 
+### Data Storage
+In a Cloud Native model, geospatial data should be stored in cloud object storage and be available to anyone through a public url. Commercial object storage providers include [Amazon S3](https://aws.amazon.com/s3/){target=_blank}, [Google Cloud Storage](https://cloud.google.com/storage){target=_blank}, and [Microsoft Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/){target=_blank}. Another storage option is [Cyverse Data Store](https://cyverse.org/data-store){target=_blank}, which was built for the academic and research communities. 
 
-<figure markdown>
-  ![Image title](images/s3_logo.png){ width="200" }
-  <figcaption> </figcaption>
-</figure>
+Utilizing existing cloud storage infrastructure eliminates the need for data providers to maintain their own servers (and APIs) and allows them to focus more on their mission. It empowers individuals to easily share their data on the web while eliminating costly local storage. [Abernathey et al. (2021)](https://doi.org/10.1109/MCSE.2021.3059437){target=_blank} provides a great overview of the benefits of cloud storage.
 
+### Data Sharing 
+Sharing of geospatial data from cloud storage can be greatly improved with the use of **Cloud Native Formats**. These formats are designed to be used in the cloud and are built for http streaming. This means that users can view and analyze data without downloading the entire dataset. This is analogous to streaming a movie on Netflix as opposed to downloading the entire movie to your computer.
 
-<figure markdown>
-  ![Image title](images/google_cloud_logo.png){ width="200" }
-  <figcaption> </figcaption>
-</figure>
-
-
-<figure markdown>
-  ![Image title](images/azure_logo.png){ width="200" }
-  <figcaption> </figcaption>
-</figure>
-
-
-
-## Why "cloud native"?
-
-:material-cog: :material-layers-triple:   :material-vector-polyline:   :material-compass-rose:   :material-math-compass:   :material-map-clock: :material-map-marker:   :material-satellite-variant:   :material-airplane:   :material-drone:   :material-quadcopter:   :material-database-cog:   :material-graph-outline: 
-
-There is a shift happening in the way we use Earth Observation System data to do research and management. Cloud data storage technologies have advanced at such a pace that we can now find and explore massive amounts of data via our web browser. At the same time online platforms with specialized software and hardware offer general data science and machine learning tools to explore these online datasets.
-
-With these advances it is easier to foster collaborations, promote data-driven discovery, drive scientific innovation, increase transparency and improve reproducibility.
-
-<figure markdown>
-  <a href="https://github.com/tyson-swetnam/agic-2022/raw/main/assets/images/conventional.png" target="blank" rel="conventional">![conventional](https://github.com/tyson-swetnam/agic-2022/raw/main/assets/images/conventional.png){ width="700" } </a>
-    <figcaption> The old ways of receiving and working with GIS data. </figcaption>
-</figure>
-
-Many of us have been participants in "sneaker net" and "mail order" data delivery ordering and managing data transfers over physical media. These data are then processed on our workstations and laptop computers and ultimately put on external hard drives or uploaded back to national data services. GIS data have changed hands for years over conventional internet protocols (`https://`, `ftp://`, and newer `s3://`), where datasets are preferentially DOWNLOADED to our local compute resources and worked on.
-
-"Cloud Native" means you are no longer looking to download all of your GIS data. Instead, we send our "code" and our execution tasks to the "Cloud" where the data are processed, and serviced over a variety of commercial cloud providers who are already hosting these large geospatial datasets (often free of cost to us).  Results can be viewed in the browser, or streamed in reduced formats back to our local computers.
-
-<figure markdown>
-  <a href="https://github.com/tyson-swetnam/agic-2022/raw/main/assets/images/cloud.png" target="blank" rel="cloud">![cloud](https://github.com/tyson-swetnam/agic-2022/raw/main/assets/images/cloud.png){ width="700" } </a>
-    <figcaption> The Cloudy way </figcaption>
-</figure>
-
-Cloud-native and "Analysis Ready Data" formats allow us to work with large datasets on the cloud easily and rather painlessly.
+There is a cloud native format to fit almost any geospatial data type. For example, [GeoJSON](geojson.md) is a cloud native format for vector data, [Cloud Optimized GeoTIFF (COG)](cog.md) is a cloud native format for raster data, and [Cloud Optimized Point Cloud (COPC)](copc.md) is a cloud native format for point cloud data. [Xarray](xarray.md) and [zarr](zarr.md) are cloud native formats that can be used for multi-dimensional raster data.
 
 <center>
 <a href="https://geojson.io" style="float:left" target="blank" rel="geojson">![geojson](https://brands.home-assistant.io/_/geo_json_events/logo.png){ width="200" height="25" } </a>
-<a href="https://stacspec.org" style="float:center" target="blank" rel="stac">![stac](https://d33wubrfki0l68.cloudfront.net/22691a3c3002324451ed99f4009de8aab761e1b7/d24da/public/images-original/stac-01.png){ width="200" height="25" } </a>
+
 <a href="https://cogeo.org" style="float:right" target="blank" rel="cog">![cog](https://www.cogeo.org/images/logo/Cog-02.png){ width="200" height="50" } </a> 
 </center> 
 
@@ -120,6 +70,53 @@ Cloud-native and "Analysis Ready Data" formats allow us to work with large datas
 <a href="https://docs.xarray.dev" style="float:center" target="blank" rel="xarray">![xarray](https://docs.xarray.dev/en/stable/_static/dataset-diagram-logo.png){ width="200" } </a> 
 <a href="https://copc.io" style="float:right" target="blank" rel="copc">![copc](https://copc.io/COPC_IO-Logo-2color.png){ width="200" } </a> 
 </center>
+<br/>
+<br/>
+<br/>
+
+Another effort to improve data sharing is the [SpatioTemporal Asset Catalog (STAC)](stac.md). It is a [json](https://en.wikipedia.org/wiki/JSON){target=_blank} based metadata and API standard for geospatial data. It's goal is to make geospatial data more easily worked with, indexed, and discovered. 
+
+
+<a href="https://stacspec.org" style="float:center" target="blank" rel="stac">![stac](https://d33wubrfki0l68.cloudfront.net/22691a3c3002324451ed99f4009de8aab761e1b7/d24da/public/images-original/stac-01.png){ width="200" height="25" } </a>
+
+
+### Cloud Compute 
+
+Google Earth Engine -walled garden  
+
+Microsoft Planetary Computer
+
+ArcGIS Online
+
+Interative computing through jupyter notebooks
+
+Open Architectures
+
+Cost Efficiency: With cloud computing, you can avoid the upfront cost and complexity of owning and maintaining your own IT infrastructure. Instead, you pay for what you use, when you use it.
+
+Scalability: Cloud computing allows businesses to scale up (or down) their operations quickly as their computing needs change.
+
+Performance: Cloud services run on a worldwide network of secure data centers, which are regularly updated to the latest generation of fast and efficient computing hardware.
+
+Speed and Agility: With cloud, new IT resources are only a click away. This means a faster time to market for businesses and less worrying about capacity planning.
+
+Productivity: Cloud computing removes the need for many of the tasks associated with managing on-site data centers (like "racking and stacking"—hardware setup, software patching, and other time-consuming IT management chores). This allows IT teams to spend time on achieving more important business goals.
+
+Security: Many cloud providers offer a set of policies, technologies, and controls that strengthen your security posture overall, helping protect data, apps, and infrastructure from potential threats.
+
+
+<br/>
+
+## Why "cloud native"?
+
+:material-cog: :material-layers-triple:   :material-vector-polyline:   :material-compass-rose:   :material-math-compass:   :material-map-clock: :material-map-marker:   :material-satellite-variant:   :material-airplane:   :material-drone:   :material-quadcopter:   :material-database-cog:   :material-graph-outline: 
+
+
+"Cloud Native" means you are no longer looking to download all of your GIS data. Instead, we send our "code" and our execution tasks to the "Cloud" where the data are processed, and serviced over a variety of commercial cloud providers who are already hosting these large geospatial datasets (often free of cost to us).  Results can be viewed in the browser, or streamed in reduced formats back to our local computers.
+
+
+
+
 
 ## Open Architectures
 
@@ -143,6 +140,5 @@ Gentemann, C. L., et al. (2021). “Science Storms the Cloud”. AGU Advances, 2
 
 Abernathey, R. P.  et al. (2021) "Cloud-Native Repositories for Big Scientific Data," in Computing in Science & Engineering, vol. 23, no. 2, pp. 26-35, 1 March-April 2021, https://doi.org/10.1109/MCSE.2021.3059437
 
-
-
+[Chris Holmes's blog on Cloud Native](https://www.ogc.org/blog-article/towards-a-cloud-native-ogc/){target=_blank}
 
