@@ -32,7 +32,7 @@ Overviews are downsampled thumbnail images of the tile. A COG will have many ove
 
 ### HTTP(s) GET Range Request
 
-The HTTP GET Range Request, also known as [Byte Serving](https://en.wikipedia.org/wiki/Byte_serving){target=_blank}, allows a client to request specific chunks of the COG using a combination of the tiles and overviews. If you are zoomed into a specific portion of the COG, then you only request the tiles that are visible in the current view. This is the technology that enables streaming of other media types like video and audio. 
+The HTTP GET Range Request, also known as [Byte Serving](https://en.wikipedia.org/wiki/Byte_serving){target=_blank}, allows a client to request specific chunks of the COG using a combination of the tiles and overviews. If you are zoomed into a specific portion of the COG, then you only request the tiles that are visible in the current view. This is the same technology that enables streaming of other media types like video and audio. 
 
 
 Check out the [COG Specification](https://github.com/cogeotiff/cog-spec/blob/master/spec.md){target=_blank}
@@ -48,8 +48,6 @@ There are numerous cloud based data stores hosting COGs, take a look through a f
 
 ### Public Datasets
 
-[NASA](https://www.earthdata.nasa.gov/engage/cloud-optimized-geotiffs){target=_blank}
-
 [ESA Sentinel-2 COGs](https://registry.opendata.aws/sentinel-2-l2a-cogs/){target=_blank}
 
 [AWS STAC Search](https://radiantearth.github.io/stac-browser/#/external/earth-search.aws.element84.com/v0){target=_blank}
@@ -59,6 +57,8 @@ There are numerous cloud based data stores hosting COGs, take a look through a f
 https://www.cogeo.org/map/
 
 [COGEO.xyz](https://cogeo.xyz/){target=_blank}
+
+https://geotiffjs.github.io/cog-explorer
 
 Stream into Qgis
 
