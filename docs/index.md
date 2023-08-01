@@ -101,21 +101,7 @@ ArcGIS Online
 
 Interative computing through jupyter notebooks
 
-Open Architectures
-
-
-
 <br/>
-
-## Why "cloud native"?
-
-:material-cog: :material-layers-triple:   :material-vector-polyline:   :material-compass-rose:   :material-math-compass:   :material-map-clock: :material-map-marker:   :material-satellite-variant:   :material-airplane:   :material-drone:   :material-quadcopter:   :material-database-cog:   :material-graph-outline: 
-
-
-"Cloud Native" means you are no longer looking to download all of your GIS data. Instead, we send our "code" and our execution tasks to the "Cloud" where the data are processed, and serviced over a variety of commercial cloud providers who are already hosting these large geospatial datasets (often free of cost to us).  Results can be viewed in the browser, or streamed in reduced formats back to our local computers.
-
-
-
 
 
 ## Open Architectures
@@ -130,15 +116,12 @@ The new approach to data sharing, focused on object storage rather than file dow
 
 ## Resources  
 
-[Cloud-Native Geospatial Outreach Event - April 2022 - from Open Geospatial Consortium (OGS)](https://www.youtube.com/watch?v=hprPIr9Vt4M&list=PLQsQNjNIDU87yUFyKy1seaiRps389RPwk){target=_blank}
-
-
-[Mapscaping Podcast on Cloud Native Geospatial](https://mapscaping.com/podcast/cloud-native-geospatial/){target=_blank}
-
-
-Gentemann, C. L., et al. (2021). “Science Storms the Cloud”. AGU Advances, 2, e2020AV000354. https://doi.org/10.1029/2020AV000354
-
 Abernathey, R. P.  et al. (2021) "Cloud-Native Repositories for Big Scientific Data," in Computing in Science & Engineering, vol. 23, no. 2, pp. 26-35, 1 March-April 2021, https://doi.org/10.1109/MCSE.2021.3059437
 
 [Chris Holmes's blog on Cloud Native](https://www.ogc.org/blog-article/towards-a-cloud-native-ogc/){target=_blank}
 
+[Cloud-Native Geospatial Outreach Event - April 2022 - from Open Geospatial Consortium (OGS)](https://www.youtube.com/watch?v=hprPIr9Vt4M&list=PLQsQNjNIDU87yUFyKy1seaiRps389RPwk){target=_blank}
+
+Gentemann, C. L., et al. (2021). “Science Storms the Cloud”. AGU Advances, 2, e2020AV000354. https://doi.org/10.1029/2020AV000354
+
+[Mapscaping Podcast on Cloud Native Geospatial](https://mapscaping.com/podcast/cloud-native-geospatial/){target=_blank}
