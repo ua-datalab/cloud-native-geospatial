@@ -20,7 +20,7 @@
 Welcome! This is an introductory course on Cloud Native Geospatial. This course is for GIS professionals, researchers, remote sensing professionals, and anyone that creates, analyzes, and shares geospatial data. Throughout, we will emphasize Open Science principles such as [FAIR](https://www.go-fair.org/fair-principles/){target=_blank} and [CARE](https://www.gida-global.org/care){target=_blank}, and highlight primarily Open Source tools. 
 
 
-<br/> Here are the topics we will cover. 
+<br/> Here are the topics we will cover:
 
 * [An overview of Cloud Storage, Sharing, and Computing](#lets-use-the-cloud)
 * [Integrate Development Environments (IDEs)](ide.md)
@@ -52,10 +52,10 @@ Cloud Native Geospatial aims to shift the 'Download' model by moving many aspect
 ### Data Storage
 In a Cloud Native model, geospatial data should be stored in cloud object storage and be available to anyone through a public url. Commercial object storage providers include [Amazon S3](https://aws.amazon.com/s3/){target=_blank}, [Google Cloud Storage](https://cloud.google.com/storage){target=_blank}, and [Microsoft Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/){target=_blank}. Another storage option is [Cyverse Data Store](https://cyverse.org/data-store){target=_blank}, which was built for the academic and research communities. 
 
-Utilizing existing cloud storage infrastructure eliminates the need for data providers to maintain their own servers (and APIs) and allows them to focus more on their mission. It empowers individuals to easily share their data on the web while eliminating costly local storage. [Abernathey et al. (2021)](https://doi.org/10.1109/MCSE.2021.3059437){target=_blank} provides a great overview of the benefits of cloud storage.
+Utilizing existing cloud storage infrastructure eliminates the need for data providers to maintain their own servers (and APIs) and allows them to focus more on their mission. It empowers individuals to easily share their data on the web while eliminating costly local storage. Cloud storage is also a great solution for never losing your data due to hardware failure. [Abernathey et al. (2021)](https://doi.org/10.1109/MCSE.2021.3059437){target=_blank} provides a excellent overview of the benefits of cloud storage.
 
 ### Data Sharing 
-Sharing of geospatial data from cloud storage can be greatly improved with the use of **Cloud Native Formats**. These formats are designed to be used in the cloud and are built for http streaming. This means that users can view and analyze data without downloading the entire dataset. This is analogous to streaming a movie on Netflix as opposed to downloading the entire movie to your computer.
+Sharing of geospatial data from cloud storage can be greatly improved with the use of **Cloud Native Formats**. These formats are designed to be used in the cloud and are built for http streaming. This means that users can view and analyze data without downloading the entire dataset. Analagously, this is like going from the original [Napster](https://en.wikipedia.org/wiki/Napster) model of downloading music to the Spotify model of streaming music.
 
 There is a cloud native format to fit almost any geospatial data type. For example, [GeoJSON](geojson.md) is a cloud native format for vector data, [Cloud Optimized GeoTIFF (COG)](cog.md) is a cloud native format for raster data, and [Cloud Optimized Point Cloud (COPC)](copc.md) is a cloud native format for point cloud data. [Xarray](xarray.md) and [zarr](zarr.md) are cloud native formats that can be used for multi-dimensional raster data.
 
@@ -63,6 +63,8 @@ There is a cloud native format to fit almost any geospatial data type. For examp
 <a href="https://geojson.io" style="float:left" target="blank" rel="geojson">![geojson](https://brands.home-assistant.io/_/geo_json_events/logo.png){ width="200" height="25" } </a>
 
 <a href="https://cogeo.org" style="float:right" target="blank" rel="cog">![cog](https://www.cogeo.org/images/logo/Cog-02.png){ width="200" height="50" } </a> 
+
+<a href="https://stacspec.org" style="float:center" target="blank" rel="stac">![stac](https://d33wubrfki0l68.cloudfront.net/22691a3c3002324451ed99f4009de8aab761e1b7/d24da/public/images-original/stac-01.png){ width="200" height="25" } </a>
 </center> 
 
 <center>
@@ -77,10 +79,19 @@ There is a cloud native format to fit almost any geospatial data type. For examp
 Another effort to improve data sharing is the [SpatioTemporal Asset Catalog (STAC)](stac.md). It is a [json](https://en.wikipedia.org/wiki/JSON){target=_blank} based metadata and API standard for geospatial data. It's goal is to make geospatial data more easily worked with, indexed, and discovered. 
 
 
-<a href="https://stacspec.org" style="float:center" target="blank" rel="stac">![stac](https://d33wubrfki0l68.cloudfront.net/22691a3c3002324451ed99f4009de8aab761e1b7/d24da/public/images-original/stac-01.png){ width="200" height="25" } </a>
+
 
 
 ### Cloud Compute 
+Moving geospatial analysis and computation from your local machine to the cloud has several advantages: 
+
+* With cloud computing, you can avoid the upfront cost and complexity of owning and maintaining your own IT infrastructure.
+
+* Cloud computing allows groups or individuals to scale up (or down) their operations quickly as their computing needs change.
+
+* Cloud computing allows users to access their data and applications from anywhere, on any device, at any time.
+
+* Geospatial in the cloud empowers colleagues to work directly together on the same data, models, and applications. The same way that [Google Docs](https://www.google.com/docs/about/){target=_blank} allows multiple people to work on the same document at the same time.
 
 Google Earth Engine -walled garden  
 
@@ -92,17 +103,6 @@ Interative computing through jupyter notebooks
 
 Open Architectures
 
-Cost Efficiency: With cloud computing, you can avoid the upfront cost and complexity of owning and maintaining your own IT infrastructure. Instead, you pay for what you use, when you use it.
-
-Scalability: Cloud computing allows businesses to scale up (or down) their operations quickly as their computing needs change.
-
-Performance: Cloud services run on a worldwide network of secure data centers, which are regularly updated to the latest generation of fast and efficient computing hardware.
-
-Speed and Agility: With cloud, new IT resources are only a click away. This means a faster time to market for businesses and less worrying about capacity planning.
-
-Productivity: Cloud computing removes the need for many of the tasks associated with managing on-site data centers (like "racking and stacking"—hardware setup, software patching, and other time-consuming IT management chores). This allows IT teams to spend time on achieving more important business goals.
-
-Security: Many cloud providers offer a set of policies, technologies, and controls that strengthen your security posture overall, helping protect data, apps, and infrastructure from potential threats.
 
 
 <br/>
