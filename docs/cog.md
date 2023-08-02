@@ -199,3 +199,13 @@ Here is an [example using the CyVerse Data Store and the CoGEO viewer](https://w
     The SpatioTemporal Asset Catalog (STAC) specification provides a common language to describe a range of geospatial information, so it can more easily be indexed and discovered. A ‘spatiotemporal asset' is any file that represents information about the earth captured in a certain space and time.
 
     COGs and STAC provide the building blocks for a flexible and accessible system for geospatial data analysis (geospatial imagery). STAC provides a system for describing large collections of geospatial data stored in cloud object store and COG provide efficient access to pieces of those collections without the need to download the data first. 
+
+
+
+You are correct, COGs do have built-in tiles that can be used to stream tiles to clients. However, there are a few reasons why you might still want to use a tile server with COGs:
+
+Performance: Tile servers can cache tiles in memory, which can improve performance by reducing the number of times that tiles need to be read from disk.
+Scalability: Tile servers can be scaled to handle large numbers of requests.
+Security: Tile servers can be used to encrypt tiles, which can help to protect them from unauthorized access.
+If you are streaming COGs to a large number of clients or if you need to ensure that your tiles are secure, then I recommend using a tile server. However, if you are only streaming COGs to a small number of clients and you do not need to worry about security, then you can use the built-in tiles in COGs.
+
