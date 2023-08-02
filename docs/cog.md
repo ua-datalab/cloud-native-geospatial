@@ -54,6 +54,10 @@ There are numerous cloud based data stores hosting COGs, take a look through a f
 
 
 ## What applications can I stream a COG into?
+
+[Example COG in Cogeo Map](https://www.cogeo.org/map/#/url/https%3A%2F%2Fdata.cyverse.org%2Fdav-anon%2Fiplant%2Fhome%2Fjgillan%2FSTAC_drone%2F22_2_ortho_cog.tif/center/-110.84602,31.78408/zoom/18)
+
+
 https://www.cogeo.org/map/
 
 [COGEO.xyz](https://cogeo.xyz/){target=_blank}
