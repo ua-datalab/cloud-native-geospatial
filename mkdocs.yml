@@ -13,7 +13,6 @@ copyright: 'License CC by 4.0'
 # Page tree
 nav:
   - Introduction: index.md
-  - Integrated Development Environments: ide.md
   - Vectors:
     - GeoJSON: geojson.md
     - Cloud Optimized Point Clouds: copc.md
@@ -22,6 +21,7 @@ nav:
     - X Array: xarray.md
     - Zarr: zarr.md
   - SpatioTemporal Asset Catalogs: stac.md
+  - Cloud Compute: ide.md
   - Jupyter Notebook Examples:
     - GeoJSON: notebooks/geojson.ipynb
     - COPC: notebooks/copc.ipynb

@@ -1,4 +1,25 @@
-Integrated Development Environments (IDE) are graphic user interfaces (GUI) for working with code and data.
+## Google Earth Engine
+
+<img align="right" width="200" height="200" src="images/GEE.png">
+
+## Microsoft Planetary Computer
+<a href="https://planetarycomputer.microsoft.com/" align="left" target="blank" rel="MPC">![MPC](images/MPC2.jpeg){ width="300" } </a>
+
+<figure markdown>
+  ![Image title](images/MPC.png){ width="500" }
+  <figcaption> </figcaption>
+</figure>
+You can interact with it using Python or R in a Jupyter Notebook environment
+
+You can open a QGIS instance on MPC, and load data using the STAC plugin. 
+
+Pangeo software
+
+
+
+## Integrated Development Environments (IDE) 
+
+IDEs are graphic user interfaces (GUI) for working with code and data.
 
 Modern IDEs are designed to interact with cloud and cloud native data types with few additional extensions.
 
@@ -20,24 +41,15 @@ Project Jupyter is focused on [:material-language-python: Python](https://www.py
 
 <a href="https://qgis.org" align="left" target="blank" rel="qgis">![qgis](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/QGIS_logo%2C_2017.svg/640px-QGIS_logo%2C_2017.svg.png){ width="200" }</a>
 
-ESRI has moved into cloud with its [ArcGIS Online](https://www.arcgis.com/index.html){target=_blank}. Proprietary licenses are required to use ArcGIS Online, but many university and government agencies provide these to their GIS employees.
-
-<a href="https://www.arcgis.com/index.html" align="left" target="blank" rel="arcgis">![arcgis](https://www.esri.com/content/dam/esrisites/en-us/common/icons/product-logos/ArcGISOnline.png){ width="100" }</a> <a href="https://www.arcgis.com/index.html" align="left" target="blank" rel="arcgis">![arcgis](https://upload.wikimedia.org/wikipedia/commons/d/df/ArcGIS_logo.png){ width="100" }</a>
 
 
 ## Cloud Workbenches
 
-[CyberGIS](https://cybergis.illinois.edu/){target=_blank} - HPC and Cloud service for geospatial data anlayses
-
 [CyVerse Discovery Environment](https://de.cyverse.org/){target=_blank} - multi-platform service for full-stack cloud data management 
 
 [DesignSafe CI](https://www.designsafe-ci.org/){target=_blank} - workbench for natural hazards research.
-
-[Google Earth Engine (GEE)](https://earthengine.google.com/){target=_blank} - planetary-scale platform for Earth science data & analysis.   
-
+   
 [HydroShare](https://www.hydroshare.org/){target=_blank} - platform for hydrological science applications supported by CUAHSI 
-
-[Microsoft Planetary Computer](https://planetarycomputer.microsoft.com/){target=_blank} - Microsoft Azure compute environment (JupyterHub) with PANGEO software.  
 
 [OSF.io](https://osf.io/){target=_blank} - is a free, open source web application that connects and supports the research workflow, enabling scientists to increase the efficiency and effectiveness of their research.
 
@@ -55,3 +67,5 @@ Free services running virtual machines on the cloud allow you to start and work 
 
 [MyBinder.org](https://mybinder.org/){target=_blank} - starts a defined environment (RStudio, Jupyter, VS Code) from a GitHub Repository, limited in size.                       
      
+
+

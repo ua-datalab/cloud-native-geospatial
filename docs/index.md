@@ -83,34 +83,34 @@ Another effort to improve data sharing is the [SpatioTemporal Asset Catalog (STA
 
 
 ### Cloud Compute 
-Moving geospatial analysis and computation from your local machine to the cloud has several advantages: 
+[Cloud Computing](ide.md) is all about moving geospatial analysis and computation from your local machine to a remote machine the cloud.  
 
-* With cloud computing, you can avoid the upfront cost and complexity of owning and maintaining your own IT infrastructure.
 
-* Cloud computing allows groups or individuals to scale up (or down) their operations quickly as their computing needs change.
+!!! Success "Advantages of Cloud Computing"
+        
+        * With cloud computing, you can avoid the upfront cost and complexity of owning and maintaining your own IT infrastructure
+        * Cloud computing allows groups or individuals to scale up (or down) their operations quickly as their computing needs change
+        * Cloud computing allows users to access their data and applications from anywhere, on any device, at any time
+        * Geospatial in the cloud empowers colleagues to work directly together on the same data, models, and applications. The same way that [Google Docs](https://www.google.com/docs/about/){target=_blank} allows multiple people to work on the same document at the same time
 
-* Cloud computing allows users to access their data and applications from anywhere, on any device, at any time.
 
-* Geospatial in the cloud empowers colleagues to work directly together on the same data, models, and applications. The same way that [Google Docs](https://www.google.com/docs/about/){target=_blank} allows multiple people to work on the same document at the same time.
 
-Google Earth Engine -walled garden  
+The most prominent examples of geospatial cloud computing are [Google Earth Engine](https://earthengine.google.com/){target=_blank} and [Microsoft Planetary Computer](https://planetarycomputer.microsoft.com/){target=_blank}. Both of these platforms provide access to large amounts of geospatial data and have built-in tools for analysis and visualization. You have the ability to bring your own data to these platforms by storing in cloud storage and using cloud native formats. 
 
-Microsoft Planetary Computer
 
-ArcGIS Online
-
-Interative computing through jupyter notebooks
+<a href="https://planetarycomputer.microsoft.com/" align="left" target="blank" rel="MPC">![MPC](images/MPC2.jpeg){ width="300" } </a> <a href="https://earthengine.google.com/" align="left" target="blank" rel="GEE">![GEE](images/GEE.png){ width="300" } </a>
 
 <br/>
 
+For those that use the ESRI ecosystem, there is [ArcGIS Online](https://www.esri.com/en-us/arcgis/products/arcgis-online/overview){target=_blank}. Proprietary licenses are required to use ArcGIS Online, but many university and government agencies provide these to their GIS employees.
 
-## Open Architectures
+<a href="https://www.arcgis.com/index.html" align="left" target="blank" rel="arcgis">![arcgis](https://www.esri.com/content/dam/esrisites/en-us/common/icons/product-logos/ArcGISOnline.png){ width="100" }</a> <a href="https://www.arcgis.com/index.html" align="left" target="blank" rel="arcgis">![arcgis](https://upload.wikimedia.org/wikipedia/commons/d/df/ArcGIS_logo.png){ width="100" }</a>
 
-The new approach to data sharing, focused on object storage rather than file downloads. This cloud platform approach is scalable and instead of moving data to processing systems near users as is the tradition, brings processing, computing, analytics and visualization to data – so called data proximate workbench capabilities, sometimes also referred to as server-side processing.
+Check out the [Cloud Computing](ide.md) section to learn more.
 
-<img src="https://miro.medium.com/max/1400/1*FkR2h8f_Lut00Uo_Pxogvg.png" width=480>
 
-(Open Architecture for scalable cloud-based data analytics. From Abernathey, Ryan (2020): Data Access Modes in Science.)
+
+<br/>
 
 ---
 
