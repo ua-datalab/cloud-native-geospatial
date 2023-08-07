@@ -2,6 +2,20 @@
 
 <a href="https://earthengine.google.com/" align="left" target="blank" rel="GEE">![GEE](images/GEE.png){ width="200" } </a>
 
+* 70 pb and 800+ curated [geospatial datasets](https://developers.google.com/earth-engine/datasets){target=_blank}
+
+* 40 years of Satellite imagery 
+
+* 250 GB of free storage for your own data
+
+* Javascript code editor to execute commands
+
+* Use GEE python library to interact with GEE from your IDE
+
+[Intro to GEE for non-coders](https://www.youtube.com/watch?v=HofrUehuEk4)
+
+* Earth Blox is a non-coding interface for using GEE. This is commercial software, but reduced price for academic use.
+
 ## Microsoft Planetary Computer
 <a href="https://planetarycomputer.microsoft.com/" align="left" target="blank" rel="MPC">![MPC](images/MPC2.jpeg){ width="300" } </a>
 
@@ -9,11 +23,33 @@
   ![Image title](images/MPC.png){ width="500" }
   <figcaption> </figcaption>
 </figure>
-You can interact with it using Python or R in a Jupyter Notebook environment
+* Using the Planetary Computer HUB, You can interact with it using Python or R in a Jupyter Notebook environment
 
-You can open a QGIS instance on MPC, and load data using the STAC plugin. 
+* When launching a Jupyter Notebook, the environment uses a Pangeo Notebook, which means it is preloaded with a lot [geospatial python libraries](https://github.com/pangeo-data/pangeo-docker-images/blob/master/pangeo-notebook/packages.txt){target=_blank}. 
 
-Pangeo software
+```
+import pystac_client
+import planetary_computer
+
+catalog = pystac_client.Client.open(
+    "https://planetarycomputer.microsoft.com/api/stac/v1/",
+    modifier=planetary_computer.sign_inplace,
+)
+point = {"type": "Point", "coordinates": [-112.107676, 36.101690]}
+search = catalog.search(collections=["nasadem"], intersects=point, limit=1)
+item = next(search.get_items())
+item
+```
+
+
+
+* [Planetary Computer Data Catalog](https://planetarycomputer.microsoft.com/catalog){target=_blank} 
+
+* You can open a QGIS instance on MPC, and load data using the STAC plugin. 
+
+* You can connect to Planetary Computer using a local instance of VS Code
+
+* All of the datasets are indexed using the SpatioTemporal Asset Catalog (STAC) standard API
 
 
 
