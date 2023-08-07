@@ -42,6 +42,7 @@ Each topic will contain easy-to-understand descriptions, useful real-world examp
 
 <img align="right" width="300" height="300" src="images/cloud_graphic.png">
 
+
 GIS and Remote Sensing have become essential tools in many industries and fields of study. The amount of data being collected, analyzed, and available on the web is growing exponentially. So much so that the traditional model of downloading data to your individual desktop computers (for analysis and storage) is becoming a major limitation. 
 
 Cloud Native Geospatial aims to shift the 'Download' model by moving many aspects of data storage, sharing, and compute onto the web using cloud infrastructure. These advances hold the potential to foster collaborations, promote data-driven discovery, drive scientific innovation, increase transparency and improve reproducibility.

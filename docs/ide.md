@@ -1,6 +1,10 @@
 ## Google Earth Engine
 
-<a href="https://earthengine.google.com/" align="left" target="blank" rel="GEE">![GEE](images/GEE.png){ width="200" } </a>
+![blah](images/GEE.png)
+
+<img align="left" width="100" height="100" src="images/GEE.png">
+
+<img align="right" width="300" height="300" src="images/cloud_graphic.png">
 
 * 70 pb and 800+ curated [geospatial datasets](https://developers.google.com/earth-engine/datasets){target=_blank}
 
@@ -17,7 +21,7 @@
 * Earth Blox is a non-coding interface for using GEE. This is commercial software, but reduced price for academic use.
 
 ## Microsoft Planetary Computer
-<a href="https://planetarycomputer.microsoft.com/" align="left" target="blank" rel="MPC">![MPC](images/MPC2.jpeg){ width="300" } </a>
+<a href="https://planetarycomputer.microsoft.com/" align="right" target="blank" rel="MPC">![MPC](images/MPC2.jpeg){ width="300" } </a>
 
 <figure markdown>
   ![Image title](images/MPC.png){ width="500" }
