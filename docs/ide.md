@@ -1,6 +1,6 @@
 ## Google Earth Engine
 
-<img align="right" width="200" height="200" src="images/GEE.png">
+<a href="https://earthengine.google.com/" align="left" target="blank" rel="GEE">![GEE](images/GEE.png){ width="200" } </a>
 
 ## Microsoft Planetary Computer
 <a href="https://planetarycomputer.microsoft.com/" align="left" target="blank" rel="MPC">![MPC](images/MPC2.jpeg){ width="300" } </a>
