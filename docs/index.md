@@ -94,12 +94,18 @@ Another effort to improve data sharing is the [SpatioTemporal Asset Catalog (STA
         * Cloud computing allows users to access their data and applications from anywhere, on any device, at any time
         * Geospatial in the cloud empowers colleagues to work directly together on the same data, models, and applications. The same way that [Google Docs](https://www.google.com/docs/about/){target=_blank} allows multiple people to work on the same document at the same time
 
+<img align="right" width="200" height="200" src="images/GEE.png">
 
 
-The most prominent examples of geospatial cloud computing are [Google Earth Engine](https://earthengine.google.com/){target=_blank} and [Microsoft Planetary Computer](https://planetarycomputer.microsoft.com/){target=_blank}. Both of these platforms provide access to large amounts of geospatial data and have built-in tools for analysis and visualization. You have the ability to bring your own data to these platforms by storing in cloud storage and using cloud native formats. 
+
+<br/>
+
+The most prominent examples of geospatial cloud computing are [Google Earth Engine](https://earthengine.google.com/){target=_blank} and [Microsoft Planetary Computer](https://planetarycomputer.microsoft.com/){target=_blank}. Both of these platforms provide access to large amounts of geospatial data and have built-in tools for analysis and visualization. <img align="right" width="300" height="300" src="images/MPC2.jpeg">You have the ability to bring your own data to these platforms by storing in cloud storage and using cloud native formats. 
 
 
-<a href="https://planetarycomputer.microsoft.com/" align="left" target="blank" rel="MPC">![MPC](images/MPC2.jpeg){ width="300" } </a> <a href="https://earthengine.google.com/" align="left" target="blank" rel="GEE">![GEE](images/GEE.png){ width="300" } </a>
+
+
+
 
 <br/>
 

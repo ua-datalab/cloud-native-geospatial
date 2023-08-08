@@ -2,6 +2,22 @@
 
 ## Overview of :material-layers-triple: SpatioTemporal Asset Catalogs (STAC)
 
+<figure markdown>
+  ![Image title](images/stac1.png){ width="450" }
+  <figcaption> </figcaption>
+</figure>
+
+<figure markdown>
+  ![Image title](images/stac2.png){ width="300" }
+  <figcaption> </figcaption>
+</figure>
+
+<figure markdown>
+  ![Image title](images/stac3.png){ width="600" }
+  <figcaption> </figcaption>
+</figure>
+
+
 The [SpatioTemporal Asset Catalog (STAC)](https://stacspec.org/en){target=_blank} specification provides a common structure for describing and cataloging spatiotemporal assets on the internet. 
 
 A [STAC Browser](https://radiantearth.github.io/stac-browser/#/){target=_blank} allows users to search, preview, and access these massive geospatial assets hosted over conventional `https://` endpoints and cloud-base object stores (i.e., `s3://` buckets).

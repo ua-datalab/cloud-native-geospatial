@@ -1,10 +1,12 @@
+<figure markdown>
+  ![Image title](images/midjourney_cloud.png){ width="200" }
+  <figcaption> </figcaption>
+</figure>
+
 ## Google Earth Engine
 
 ![blah](images/GEE.png)
 
-<img align="left" width="100" height="100" src="images/GEE.png">
-
-<img align="right" width="300" height="300" src="images/cloud_graphic.png">
 
 * 70 pb and 800+ curated [geospatial datasets](https://developers.google.com/earth-engine/datasets){target=_blank}
 

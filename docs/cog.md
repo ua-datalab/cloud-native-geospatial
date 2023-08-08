@@ -1,3 +1,7 @@
+<figure markdown>
+  ![Image title](images/cog_logo.png){ width="200" }
+  <figcaption> </figcaption>
+</figure>
 ## Overview of :material-layers: Cloud Optimized GeoTIFF (COG)
 
 ### Background
@@ -182,30 +186,19 @@ If you have your own web server, or public cloud bucket, you can upload your new
 
 Here is an [example using the CyVerse Data Store and the CoGEO viewer](https://www.cogeo.org/map/#/url/https%3A%2F%2Fdata.cyverse.org%2Fdav-anon%2Fiplant%2Fhome%2Ftswetnam%2Fagic-2022%2Fp_ndvi_cor_cog.tif/center/-112.9834,34.4884/zoom/14){target=_blank}
 
-# Additional Reading
-
-[GeoTIFF Compression for Dummies](https://blog.cleverelephant.ca/2015/02/geotiff-compression-for-dummies.html){target=_blank} - suggests the best version is "a GeoTIFF, with JPEG compression, internally tiled, in the YCBCR color space, with internal overviews."
 
 [COGS in Production blog post by Sean Rennie](https://sean-rennie.medium.com/cogs-in-production-e9a42c7f54e4){target=_blank}
 
-??? Info "Relationship of COGs to other cloud native formats"
-
-    Much of the material in this workshop is recursive - you need to know about `GeoJSON` to understand STACs and to work with tools which query COGs, COPC, Zarr, and Xarray data.
-
-    Built to support efficient tile-by-tile access to large collections of geospatial imagery, the COG has provided an excellent template for the development of other cloud-optimized data formats (e.g. [Zarr](https://zarr.readthedocs.io/en/stable/index.html){target=_blank}).
-
-    Like many open source projects, the development and production of COGs has lead to innovation in other areas as well. One example of such innovation is the development of the [SpatioTemporal Asset Catalog (STAC)](stac.md).
-
-    The SpatioTemporal Asset Catalog (STAC) specification provides a common language to describe a range of geospatial information, so it can more easily be indexed and discovered. A ‘spatiotemporal asset' is any file that represents information about the earth captured in a certain space and time.
-
-    COGs and STAC provide the building blocks for a flexible and accessible system for geospatial data analysis (geospatial imagery). STAC provides a system for describing large collections of geospatial data stored in cloud object store and COG provide efficient access to pieces of those collections without the need to download the data first. 
 
 
 
-You are correct, COGs do have built-in tiles that can be used to stream tiles to clients. However, there are a few reasons why you might still want to use a tile server with COGs:
 
-Performance: Tile servers can cache tiles in memory, which can improve performance by reducing the number of times that tiles need to be read from disk.
-Scalability: Tile servers can be scaled to handle large numbers of requests.
-Security: Tile servers can be used to encrypt tiles, which can help to protect them from unauthorized access.
-If you are streaming COGs to a large number of clients or if you need to ensure that your tiles are secure, then I recommend using a tile server. However, if you are only streaming COGs to a small number of clients and you do not need to worry about security, then you can use the built-in tiles in COGs.
+### If I have COGs, do I still need a tile server? 
+There are a few reasons why you might still want to use a tile server with COGs:
+
+* Performance: Tile servers can cache tiles in memory, which can improve performance by reducing the number of times that tiles need to be read from disk.
+
+* Scalability: Tile servers can be scaled to handle large numbers of requests.
+
+* Security: Tile servers can be used to encrypt tiles, which can help to protect them from unauthorized access. If you are streaming COGs to a large number of clients or if you need to ensure that your tiles are secure, then I recommend using a tile server. However, if you are only streaming COGs to a small number of clients and you do not need to worry about security, then you can use the built-in tiles in COGs.
 
