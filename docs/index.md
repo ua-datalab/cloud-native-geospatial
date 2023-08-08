@@ -84,7 +84,7 @@ Another effort to improve data sharing is the [SpatioTemporal Asset Catalog (STA
 
 
 ### Cloud Compute 
-[Cloud Computing](ide.md) is all about moving geospatial analysis and computation from your local machine to a remote machine the cloud.  
+[Cloud Computing](ide.md) is all about moving geospatial analysis and computation from your local machine to a remote machine in the cloud. This approach has several advantages over traditional desktop computing.
 
 
 !!! Success "Advantages of Cloud Computing"

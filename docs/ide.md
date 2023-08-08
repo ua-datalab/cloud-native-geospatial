@@ -1,28 +1,44 @@
-<figure markdown>
-  ![Image title](images/midjourney_cloud.png){ width="200" }
-  <figcaption> </figcaption>
-</figure>
+![blah](images/midjourney_cloud.png){ width="300" }
 
-## Google Earth Engine
+As mentioned in the [introduction](index.md#cloud-compute), cloud computing is all about moving geospatial analysis and computation from your local machine to a remote machine in the cloud. This approach has several advantages over traditional desktop computing.
 
-![blah](images/GEE.png)
+!!! Success "Advantages of Cloud Computing"
+        
+        * With cloud computing, you can avoid the upfront cost and complexity of owning and maintaining your own IT infrastructure
+        * Cloud computing allows groups or individuals to scale up (or down) their operations quickly as their computing needs change
+        * Cloud computing allows users to access their data and applications from anywhere, on any device, at any time
+        * Geospatial in the cloud empowers colleagues to work directly together on the same data, models, and applications. The same way that [Google Docs](https://www.google.com/docs/about/){target=_blank} allows multiple people to work on the same document at the same time
+
+___
+
+### Google Earth Engine
+
+<a href="https://earthengine.google.com/ style="float:left" target="blank" rel="app">![app](images/gee2.png){ width="100" } </a>
 
 
-* 70 pb and 800+ curated [geospatial datasets](https://developers.google.com/earth-engine/datasets){target=_blank}
-
-* 40 years of Satellite imagery 
+* 70 pb and 800+ curated [geospatial datasets](https://developers.google.com/earth-engine/datasets){target=_blank}, including 40 years of satellite imagery 
 
 * 250 GB of free storage for your own data
 
 * Javascript code editor to execute commands
 
-* Use GEE python library to interact with GEE from your IDE
+* Use GEE python [library](https://developers.google.com/earth-engine/guides/python_install){target=_blank} to interact with GEE from your IDE
 
-[Intro to GEE for non-coders](https://www.youtube.com/watch?v=HofrUehuEk4)
+* You can create GEE 'apps' which are basically mini web sites to interact with data. Check out this [example app showcasing drone imagery](https://bit.ly/srer-drone-2019){target=_blank}.
 
-* Earth Blox is a non-coding interface for using GEE. This is commercial software, but reduced price for academic use.
+<a href="https://bit.ly/srer-drone-2019" style="float:center" target="blank" rel="app">![app](images/gee_app.png){ width="500" } </a>
 
-## Microsoft Planetary Computer
+
+This [video](https://www.youtube.com/watch?v=HofrUehuEk4){target=_blank} gives a gentle introduction to GEE and is aimed at non-coders
+
+* [Earth Blox](https://www.earthblox.io/){target=_blank} is a non-coding interface for using GEE. This is commercial software, but reduced price for academic use.
+
+* You [import](https://developers.google.com/earth-engine/guides/image_overview){target=_blank} and and [export](https://developers.google.com/earth-engine/guides/exporting_images){target=_blank} Cloud Optimized Geotiffs in GEE
+
+</br>
+___
+
+### Microsoft Planetary Computer
 <a href="https://planetarycomputer.microsoft.com/" align="right" target="blank" rel="MPC">![MPC](images/MPC2.jpeg){ width="300" } </a>
 
 <figure markdown>
@@ -49,6 +65,7 @@ item
 
 
 
+
 * [Planetary Computer Data Catalog](https://planetarycomputer.microsoft.com/catalog){target=_blank} 
 
 * You can open a QGIS instance on MPC, and load data using the STAC plugin. 
@@ -57,9 +74,10 @@ item
 
 * All of the datasets are indexed using the SpatioTemporal Asset Catalog (STAC) standard API
 
+* You can now access Planetary Computer Data Catalog from [ArcGIS Pro](https://www.esri.com/en-us/c/product/arcgis-for-microsoft-planetary-computer){target=_blank}
 
-
-## Integrated Development Environments (IDE) 
+___
+### Integrated Development Environments (IDE) 
 
 IDEs are graphic user interfaces (GUI) for working with code and data.
 

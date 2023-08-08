@@ -2,7 +2,6 @@
   ![Image title](images/cog_logo.png){ width="200" }
   <figcaption> </figcaption>
 </figure>
-## Overview of :material-layers: Cloud Optimized GeoTIFF (COG)
 
 ### Background
 
@@ -44,29 +43,32 @@ Check out the [COG Specification](https://github.com/cogeotiff/cog-spec/blob/mas
 ## Where Can I Find COG examples on the internet?
 There are numerous cloud based data stores hosting COGs, take a look through a few of these:
 
-[Google Earth Engine](https://developers.google.com/earth-engine/guides/image_overview){target=_blank} supports Image Collections in COG format.
 
-[Microsoft Planetary Computer Catalog](https://planetarycomputer.microsoft.com/catalog){target=_blank} - most of the imagery datasets in Planetary Computer are hosted as COGs
+[Microsoft Planetary Computer Catalog](https://planetarycomputer.microsoft.com/catalog){target=_blank} - most of the imagery datasets in Planetary Computer are hosted as COGs. You can also view the catalog through the Planetary Computer [STAC API browser](https://radiantearth.github.io/stac-browser/#/external/planetarycomputer.microsoft.com/api/stac/v1/){target=_blank} 
 
-[OpenAerialMap](https://openaerialmap.org/){target=_blank} hosts drone imagery
 
-### Public Datasets
 
 [ESA Sentinel-2 COGs](https://registry.opendata.aws/sentinel-2-l2a-cogs/){target=_blank}
 
-[AWS STAC Search](https://radiantearth.github.io/stac-browser/#/external/earth-search.aws.element84.com/v0){target=_blank}
+
+[Planet](https://www.planet.com/) is streaming out their imagery as COGs. You can also do simple analysis of COGs direclyt within the Planet platform. 
 
 
 ## What applications can I stream a COG into?
 
-[Example COG in Cogeo Map](https://www.cogeo.org/map/#/url/https%3A%2F%2Fdata.cyverse.org%2Fdav-anon%2Fiplant%2Fhome%2Fjgillan%2FSTAC_drone%2F22_2_ortho_cog.tif/center/-110.84602,31.78408/zoom/18)
+This example COG is a drone orthomosaic that is hosted in Cyverse Data Store. We can stream it to this viewer. [Example COG in Cogeo Map](https://www.cogeo.org/map/#/url/https%3A%2F%2Fdata.cyverse.org%2Fdav-anon%2Fiplant%2Fhome%2Fjgillan%2FSTAC_drone%2F22_2_ortho_cog.tif/center/-110.84602,31.78408/zoom/18){target=_blank}
+
+The COG is on Cyverse Data Store: https://data.cyverse.org/dav-anon/iplant/home/jgillan/STAC_drone/22_2_ortho_cog.tif
+
+
+Here is another [example](https://www.cogeo.org/map/#/url/https%3A%2F%2Foin-hotosm.s3.us-east-1.amazonaws.com%2F64d1bd4419cb3a000147a56a%2F0%2F64d1bd4419cb3a000147a56b.tif/center/-90.68608,42.49636/zoom/17){target=_blank} of drone imagery COG from [OpenAerialMap](https://openaerialmap.org/){target=_blank}. The data is hosted on AWS and streamed to the cogeo viewer 
 
 
 https://www.cogeo.org/map/
 
 [COGEO.xyz](https://cogeo.xyz/){target=_blank}
 
-https://geotiffjs.github.io/cog-explorer
+
 
 Stream into Qgis
 
@@ -86,6 +88,8 @@ Stream into ArcGIS Online
 
 What kind of analysis can I do on a COG?
 
+
+
 ## How Can I create a COG?
 gdal
 
@@ -93,7 +97,7 @@ gdal
 
 Python library Rio-cogeo - RasterIO plugin to create and validate COGs
 
-Can QGIS output COG?
+Can QGIS output COG? Not that I know of
 
 Can ArcGIS Pro output COG?
 
@@ -201,4 +205,17 @@ There are a few reasons why you might still want to use a tile server with COGs:
 * Scalability: Tile servers can be scaled to handle large numbers of requests.
 
 * Security: Tile servers can be used to encrypt tiles, which can help to protect them from unauthorized access. If you are streaming COGs to a large number of clients or if you need to ensure that your tiles are secure, then I recommend using a tile server. However, if you are only streaming COGs to a small number of clients and you do not need to worry about security, then you can use the built-in tiles in COGs.
+
+
+WMTS - Web Map Tile Service - best for use with desktop applications
+
+XYZ - best for use with web applications
+
+WMTS and XYZ tiles are primarily designed for efficient map display in web environments. Their main goal is to provide quick and seamless map visualizations over the internet by serving small, pre-defined tiles at multiple zoom levels. These tiles are ideal for web maps where users might pan and zoom around the globe, as the small tiles can be fetched and displayed rapidly.
+
+However, for analysis purposes – where users might want to compute statistics, apply algorithms, or extract detailed information from imagery or raster data – these tiling methods are not optimal. The reason is that analysis often requires access to raw, high-resolution data rather than the downsampled or potentially lossy representations provided by these tiles.
+
+That's where formats like Cloud Optimized GeoTIFFs (COGs) come into play. COGs are designed to allow for efficient access to high-resolution raster datasets, making them more suited for analytical purposes. With COGs, one can access and process only specific portions of a large raster without downloading the entire file, making it efficient for cloud-based analysis workflows.
+
+
 
