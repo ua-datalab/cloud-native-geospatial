@@ -1,28 +1,34 @@
-[Jump to :material-hand-clap: hands-on lesson :material-school: ](#hands-on)
 
 ## Overview of :material-layers-triple: SpatioTemporal Asset Catalogs (STAC)
-
-<figure markdown>
-  ![Image title](images/stac1.png){ width="450" }
-  <figcaption> </figcaption>
-</figure>
 
 <figure markdown>
   ![Image title](images/stac2.png){ width="300" }
   <figcaption> </figcaption>
 </figure>
 
+
 <figure markdown>
-  ![Image title](images/stac3.png){ width="600" }
+  ![Image title](images/stac1.png){ width="450" }
+  <figcaption> </figcaption>
+</figure>
+
+In the distributed model, everyone’s drone imagery will be located in many places across the web. But the STAC metadata that describes the geospatial assets and where they are located, that metadata is indexed in a central place. That place is the stacindex.org and Browser (https://radiantearth.github.io/stac-browser/#/). By using this model we are creating one giant catalog of imagery. 
+
+
+<figure markdown>
+  ![Image title](images/stac3.png){ width="500" }
   <figcaption> </figcaption>
 </figure>
 
 
+
 The [SpatioTemporal Asset Catalog (STAC)](https://stacspec.org/en){target=_blank} specification provides a common structure for describing and cataloging spatiotemporal assets on the internet. 
 
-A [STAC Browser](https://radiantearth.github.io/stac-browser/#/){target=_blank} allows users to search, preview, and access these massive geospatial assets hosted over conventional `https://` endpoints and cloud-base object stores (i.e., `s3://` buckets).
+[STAC Spec on GitHub](https://github.com/radiantearth/stac-spec){target=_blank}
 
-[STAC Specification]()
+The [Radiant Earth STAC Browser](https://radiantearth.github.io/stac-browser/#/){target=_blank} allows users to search, preview, and access these massive geospatial assets hosted over conventional `https://` endpoints and cloud-base object stores (i.e., `s3://` buckets).
+
+[STAC Index](https://stacindex.org/)
 
 There are four components to making a given STAC run. They can be used independently of one another, but most often they are all used together:
 
@@ -33,7 +39,7 @@ There are four components to making a given STAC run. They can be used independe
 | `collections` | additional information such as the extents, license, keywords, providers, etc that describe STAC Items | `JSON` |
 | `API` | a RESTful endpoint that enables search of STAC Items, specified in [OpenAPI](https://spec.openapis.org/oas/v3.1.0){target=_blank}, following [OGC Web Feature Service 3.0](https://svn.osgeo.org/gdal/trunk/gdal/ogr/ogrsf_frmts/wfs/drv_wfs3.html){target=_blank} | Web Service |
 
-[:material-code-json: Official STAC Tutorial](https://stacspec.org/en/tutorials/intro-to-stac/){target=_blank}
+
 
 ``` mermaid
 classDiagram
@@ -514,49 +520,20 @@ The STAC API
 
 Generating your own STACs can be done manually, programmatically, or using a templated editor. 
 
-[Create a Catalog with PyStac](https://developers.planet.com/docs/planetschool/introduction-to-stac-part-2-creating-an-example-stac-catalog-of-planet-imagery-with-pystac/){target=_blank}
+[Create a Catalog with PyStac](https://pystac.readthedocs.io/en/latest/index.html){target=_blank}, a python library
+
+[Tutorials to read/write STAC ](https://stacspec.org/en/tutorials/intro-to-stac/){target=_blank} using the python library [Pystac](https://pystac.readthedocs.io/en/latest/index.html){target=_blank}
 
 [Official STAC Learning Examples](https://stacindex.org/learn){target=_blank}
 
-# Hands On
-
-## **Step 1** Go to [https://radiantearth.github.io/stac-browser/#](https://radiantearth.github.io/stac-browser/#){target=_blank}
-
-Radiant Earth maintains the [STAC Browser](https://radiantearth.github.io/stac-browser/#/){target=_blank}
-
-Open a new tab and explore the different STAC Catalogs that have been added there.
-
-Examples of STAC Browsers
 
 * [Microsoft Planetary Computer STACs](https://planetarycomputer.microsoft.com/catalog){target=_blank}
 
 * [Microsoft Planetary Computer Jupyter Notebook Examples](https://github.com/microsoft/PlanetaryComputerExamples){target=_blank}
 
-* [STAC Index](https://stacindex.org/){target=_blank}
 
-* [QGIS STAC Browser Plugin](https://github.com/stac-utils/qgis-stac-plugin){target=_blank}
+* [QGIS STAC Browser Plugin](https://stacspec.org/en/tutorials/1-install-stac-api-browser-qgis-plugin/){target=_blank}
 
 * [Scene Explorer ESRI](https://www.esri.com/en-us/arcgis-marketplace/listing/products/b1689f3ddcf742de988e0d5a070b31c4){target=_blank}
 
-* [Awesome Community Datasets](https://samapriya.github.io/awesome-gee-community-datasets/){target=_blank}
-
-## **Step 2** Viewing the STAC JSON
-
-Normally, you should use a STAC Browser to view a rendered STAC Catalog.
-
-However, there may be times that you need to look directly at a catalog json
-
-Here we're going to look at a Community dataset of Google Earth Engine Collections,
-
-[https://github.com/samapriya/awesome-gee-community-datasets](https://github.com/samapriya/awesome-gee-community-datasets)
-
-Look at the STAC json for [https://raw.githubusercontent.com/samapriya/awesome-gee-community-datasets/master/catalog/stac_catalog.json](https://raw.githubusercontent.com/samapriya/awesome-gee-community-datasets/master/catalog/stac_catalog.json){target=_blank}
-
-Note: there is "root" "self" and "child" in the "links".
-
-There are hundreds of "child" .jsons in this catalog. Each is separately maintained in a sub-folder for the repository, [https://github.com/samapriya/awesome-gee-community-datasets/tree/master/catalog](https://github.com/samapriya/awesome-gee-community-datasets/tree/master/catalog)
-
-Note: each child json has its own "self" "parent" and "root" in the "links" which allow them to be browsed by the stac-browser:
-
-[https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/samapriya/awesome-gee-community-datasets/master/catalog/stac_catalog.json](https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/samapriya/awesome-gee-community-datasets/master/catalog/stac_catalog.json)
 

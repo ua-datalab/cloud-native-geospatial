@@ -20,7 +20,7 @@ nav:
     - Cloud Optimized GeoTiff: cog.md
     - X Array: xarray.md
     - Zarr: zarr.md
-  - SpatioTemporal Asset Catalogs: stac.md
+  - SpatioTemporal Asset Catalog: stac.md
   - Cloud Compute: ide.md
   - Jupyter Notebook Examples:
     - GeoJSON: notebooks/geojson.ipynb
