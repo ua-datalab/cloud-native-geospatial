@@ -1,19 +1,29 @@
 
-## Overview of :material-layers-triple: SpatioTemporal Asset Catalogs (STAC)
+## Introduction to STAC <a href= style="float:right" target="blank" rel="geojson">![geojson](images/stac2.png){ width="200" height="200" } </a>
 
-<figure markdown>
-  ![Image title](images/stac2.png){ width="300" }
-  <figcaption> </figcaption>
-</figure>
+[SpatioTemporal Asset Catalogs (STAC)](https://stacspec.org/en){target=_blank} are json and geojson files that describe (i.e., metadata) and catalog geospatial assets for ease of discovery and sharing across the web. The geospatial assets can be any type of geospatial data, including imagery, point clouds, datacubes, and vector data. Developing STAC has been an open collaborative effort across the geospatial community with the goal of standardizing the way geospatial assets are described and shared across the web. 
+
+Using the STAC model, geospatial assets can be stored anywhere in cloud storage (like s3, blob, google cloud, or Cyverse). The json and geojson files that are used to describe and locate the assets can also be located anywhere, but are all indexed in a central place, the [STAC Index](https://stacindex.org/). ***By using this model we are essentially creating one giant open catalog of geospatial data.*** 
 
 
 <figure markdown>
   ![Image title](images/stac1.png){ width="450" }
-  <figcaption> </figcaption>
+  <figcaption>The STAC distributed catalog model </figcaption>
 </figure>
 
-In the distributed model, everyone’s drone imagery will be located in many places across the web. But the STAC metadata that describes the geospatial assets and where they are located, that metadata is indexed in a central place. That place is the stacindex.org and Browser (https://radiantearth.github.io/stac-browser/#/). By using this model we are creating one giant catalog of imagery. 
+Browsing through STAC catalogs to find data or imagery of interest can be done basically two ways:
 
+* The [Radiant Earth STAC Browser](https://radiantearth.github.io/stac-browser/#/){target=_blank} provides a nice graphical interface to browse through content and a map to preview the data. There will typically be descriptions of the data including the data provider, the data license, and the data format. There will also be links to download or stream the actual data from it's location in cloud storage.
+
+
+<figure markdown>
+  ![Image title](images/stac_5.png){ width="500" }
+  <figcaption>Browsing Geospatial Data with STAC Browser </figcaption>
+</figure>
+
+* You can query and interact with STAC catalogs programmatically by using python libraries such as [pystac](https://pystac.readthedocs.io/en/latest/index.html){target=_blank} and [pystac_client](https://pystac-client.readthedocs.io/en/stable/index.html){target=_blank}. 
+
+Use Case 1: A researcher wants to find all the Sentinel-2 imagery that is available for a particular area of interest. They can search the [STAC Index](https://stacindex.org/) for all the STACs that contain Sentinel-2 imagery. They can then search the STACs for the imagery that they need.
 
 <figure markdown>
   ![Image title](images/stac3.png){ width="500" }
@@ -21,8 +31,6 @@ In the distributed model, everyone’s drone imagery will be located in many pla
 </figure>
 
 
-
-The [SpatioTemporal Asset Catalog (STAC)](https://stacspec.org/en){target=_blank} specification provides a common structure for describing and cataloging spatiotemporal assets on the internet. 
 
 [STAC Spec on GitHub](https://github.com/radiantearth/stac-spec){target=_blank}
 
