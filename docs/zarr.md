@@ -24,3 +24,5 @@ The power of Zarr is most easily explained when working with it on the cloud.
 Let's drop right into a Jupyter Notebook for a high level overview of Zarr
 
 [![image](https://colab.research.google.com/assets/colab-badge.svg)](https://githubtocolab.com/tyson-swetnam/agic-2022/blob/main/docs/notebooks/zarr.ipynb)
+
+<iframe width="500" height="300" src="https://www.youtube.com/embed/sY20UpYCAEE" title="Pangeo Forge: Crowdsourcing Open Data in the Cloud- Ryan Abernathey | SciPy 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

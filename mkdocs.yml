@@ -18,7 +18,6 @@ nav:
     - Cloud Optimized Point Clouds: copc.md
   - Rasters:
     - Cloud Optimized GeoTiff: cog.md
-    - X Array: xarray.md
     - Zarr: zarr.md
   - SpatioTemporal Asset Catalog: stac.md
   - Cloud Compute: ide.md

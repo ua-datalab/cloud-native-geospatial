@@ -39,35 +39,31 @@ The HTTP GET Range Request, also known as [Byte Serving](https://en.wikipedia.or
 
 
 Check out the [COG Specification](https://github.com/cogeotiff/cog-spec/blob/master/spec.md){target=_blank}
+___
 
-## Where Can I Find COG examples on the internet?
+### Example COGs on the internet
 There are numerous cloud based data stores hosting COGs, take a look through a few of these:
 
 
-[Microsoft Planetary Computer Catalog](https://planetarycomputer.microsoft.com/catalog){target=_blank} - most of the imagery datasets in Planetary Computer are hosted as COGs. You can also view the catalog through the Planetary Computer [STAC API browser](https://radiantearth.github.io/stac-browser/#/external/planetarycomputer.microsoft.com/api/stac/v1/){target=_blank} 
+* [Microsoft Planetary Computer Catalog](https://planetarycomputer.microsoft.com/catalog){target=_blank} - most of the imagery datasets in Planetary Computer are hosted as COGs. You can also view the catalog through the Planetary Computer [STAC API browser](https://radiantearth.github.io/stac-browser/#/external/planetarycomputer.microsoft.com/api/stac/v1/){target=_blank} 
+
+* [ESA Sentinel-2 COGs](https://registry.opendata.aws/sentinel-2-l2a-cogs/){target=_blank}
 
 
+* [Planet](https://www.planet.com/) is streaming out their imagery as COGs. You can also do simple analysis of COGs direclyt within the Planet platform. 
 
-[ESA Sentinel-2 COGs](https://registry.opendata.aws/sentinel-2-l2a-cogs/){target=_blank}
+* This example COG is a drone orthomosaic that is hosted in Cyverse Data Store. We can stream it to this viewer. [Example COG in Cogeo Map](https://www.cogeo.org/map/#/url/https%3A%2F%2Fdata.cyverse.org%2Fdav-anon%2Fiplant%2Fhome%2Fjgillan%2FSTAC_drone%2F22_2_ortho_cog.tif/center/-110.84602,31.78408/zoom/18){target=_blank}
 
+* The COG is on Cyverse Data Store: https://data.cyverse.org/dav-anon/iplant/home/jgillan/STAC_drone/22_2_ortho_cog.tif
 
-[Planet](https://www.planet.com/) is streaming out their imagery as COGs. You can also do simple analysis of COGs direclyt within the Planet platform. 
+* Here is another [example](https://www.cogeo.org/map/#/url/https%3A%2F%2Foin-hotosm.s3.us-east-1.amazonaws.com%2F64d1bd4419cb3a000147a56a%2F0%2F64d1bd4419cb3a000147a56b.tif/center/-90.68608,42.49636/zoom/17){target=_blank} of drone imagery COG from [OpenAerialMap](https://openaerialmap.org/){target=_blank}. The data is hosted on AWS and streamed to the cogeo viewer 
+___
 
-
-## What applications can I stream a COG into?
-
-This example COG is a drone orthomosaic that is hosted in Cyverse Data Store. We can stream it to this viewer. [Example COG in Cogeo Map](https://www.cogeo.org/map/#/url/https%3A%2F%2Fdata.cyverse.org%2Fdav-anon%2Fiplant%2Fhome%2Fjgillan%2FSTAC_drone%2F22_2_ortho_cog.tif/center/-110.84602,31.78408/zoom/18){target=_blank}
-
-The COG is on Cyverse Data Store: https://data.cyverse.org/dav-anon/iplant/home/jgillan/STAC_drone/22_2_ortho_cog.tif
-
-
-Here is another [example](https://www.cogeo.org/map/#/url/https%3A%2F%2Foin-hotosm.s3.us-east-1.amazonaws.com%2F64d1bd4419cb3a000147a56a%2F0%2F64d1bd4419cb3a000147a56b.tif/center/-90.68608,42.49636/zoom/17){target=_blank} of drone imagery COG from [OpenAerialMap](https://openaerialmap.org/){target=_blank}. The data is hosted on AWS and streamed to the cogeo viewer 
-
+### Applications that can use COGs
 
 https://www.cogeo.org/map/
 
 [COGEO.xyz](https://cogeo.xyz/){target=_blank}
-
 
 
 Stream into Qgis
@@ -88,20 +84,31 @@ Stream into ArcGIS Online
 
 What kind of analysis can I do on a COG?
 
+* GEE can read and write COGs
 
+___
 
-## How Can I create a COG?
-gdal
+### Creating Your Own COGs
 
-* [`cogger`](https://github.com/airbusgeo/cogger){target=_blank} is a rapid COG generator from GeoTIFF
+#### GDAL
 
-Python library Rio-cogeo - RasterIO plugin to create and validate COGs
+The lastest versions of [GDAL](https://gdal.org){target=_blank} (>v3.1) have [COG generator](https://gdal.org/drivers/raster/cog.html){target=_blank} installed by default.
 
-Can QGIS output COG? Not that I know of
+[Most GIS software](https://gdal.org/software_using_gdal.html#software-using-gdal){target=_blank} use GDAL.
 
-Can ArcGIS Pro output COG?
+??? Tip "Install GDAL"
 
-GEE can output COGs
+    GDAL installation can at times be difficult. When different older python environments are installed on a desktop or laptop GDAL can become broken or incompatiblity issues can come up when installing it.
+
+    [USGS Windows GDAL Installation Guide](https://apps.nationalmap.gov/raster-conversion/gdal-installation-and-setup-guide.html){target=_blank} 
+
+    [Official GDAL Install Guide](https://gdal.org/download.html){target=_blank} 
+
+    [QGIS](https://www.qgis.org/en/site/){target=_blank} installs GDAL by default
+
+    [Anaconda](https://anaconda.org/conda-forge/gdal){target=_blank} and its package management `conda`
+
+    [Docker `osgeo/gdal`](https://hub.docker.com/r/osgeo/gdal){target=_blank} images are maintained on the Docker Hub
 
 
 
@@ -143,25 +150,16 @@ gdaladdo \
 ```
 
 
-## GDAL
+#### Cogger
 
-The lastest versions of [GDAL](https://gdal.org){target=_blank} (>v3.1) have [COG generator](https://gdal.org/drivers/raster/cog.html){target=_blank} installed by default.
+* [`cogger`](https://github.com/airbusgeo/cogger){target=_blank} is a rapid COG generator from GeoTIFF
 
-[Most GIS software](https://gdal.org/software_using_gdal.html#software-using-gdal){target=_blank} use GDAL.
 
-??? Tip "Install GDAL"
+#### Python library Rio-cogeo - RasterIO plugin to create and validate COGs
 
-    GDAL installation can at times be difficult. When different older python environments are installed on a desktop or laptop GDAL can become broken or incompatiblity issues can come up when installing it.
 
-    [USGS Windows GDAL Installation Guide](https://apps.nationalmap.gov/raster-conversion/gdal-installation-and-setup-guide.html){target=_blank} 
 
-    [Official GDAL Install Guide](https://gdal.org/download.html){target=_blank} 
 
-    [QGIS](https://www.qgis.org/en/site/){target=_blank} installs GDAL by default
-
-    [Anaconda](https://anaconda.org/conda-forge/gdal){target=_blank} and its package management `conda`
-
-    [Docker `osgeo/gdal`](https://hub.docker.com/r/osgeo/gdal){target=_blank} images are maintained on the Docker Hub
 
 
 
@@ -170,25 +168,6 @@ The lastest versions of [GDAL](https://gdal.org){target=_blank} (>v3.1) have [CO
 [Open Layers COGs](https://openlayers.org/en/latest/examples/cog.html){target=_blank}
 
 [Open Layers WebGLTile Pyramid from COG](https://openlayers.org/en/latest/examples/cog-pyramid.html){target=_blank}
-
-
-
-
-
-
-
-
-Try adding the `https://` URL of the COG that you found on the internet into the viewer.
-
-
-
-
-
-## **Step 5** Optional: upload the file to a public `https://` endpoint
-
-If you have your own web server, or public cloud bucket, you can upload your new COG and view it using one of the example viewers, or try loading it using QGIS.
-
-Here is an [example using the CyVerse Data Store and the CoGEO viewer](https://www.cogeo.org/map/#/url/https%3A%2F%2Fdata.cyverse.org%2Fdav-anon%2Fiplant%2Fhome%2Ftswetnam%2Fagic-2022%2Fp_ndvi_cor_cog.tif/center/-112.9834,34.4884/zoom/14){target=_blank}
 
 
 [COGS in Production blog post by Sean Rennie](https://sean-rennie.medium.com/cogs-in-production-e9a42c7f54e4){target=_blank}
