@@ -1,67 +1,46 @@
 
 [Jump to :material-hand-clap: hands-on lesson :material-school: ](#hands-on)
 
-## Overview of :material-code-json: GeoJSON (Geo+JSON)
+## Cloud-Native Vector Format?
 
-To begin with, [JavaScript Object Notation (JSON)](https://www.json.org/json-en.html){target=_blank} is a lightweight, text-based, language-independent data interchange format. 
+There are many different vector formats that are used to represent spatial data across the web. There is currently not a 'go-to' format, but many are in active development to be considered 'cloud-native' (i.e., streamable across http). 
 
-* [JSON syntax](https://www.w3schools.com/js/js_json_syntax.asp){target=_blank}
-* [rfc7159](https://datatracker.ietf.org/doc/html/rfc7159){target=_blank}
+Here are some of these vector formats:
 
-??? Info "an old style example the JSON Schema for a geospatial object"
-  
-    ``` json
-    {
-      "$id": "https://example.com/geographical-location.schema.json",
-      "$schema": "https://json-schema.org/draft/2020-12/schema",
-      "title": "AGIC Venue",
-      "description": "A geographical coordinate where this workshop is being taught",
-      "required": [ "latitude", "longitude" ],
-      "type": "object",
-      "properties": {
-        "latitude": {
-          "type": "number",
-          "minimum": -90,
-          "maximum": 90
-        },
-        "longitude": {
-          "type": "number",
-          "minimum": -180,
-          "maximum": 180
-        }
-      }
-    }
-    ```
-    The location **data** section of the JSON later describes a point:
-    
-    ``` json
-    {
-      "latitude": 34.5510,
-      "longitude": -112.4471
-    }
-    ```
+* [Flatgeobuf](http://flatgeobuf.org/){target=_blank} - 
+Check out this [blog](https://worace.works/2022/02/23/kicking-the-tires-flatgeobuf/){target=_blank} to learn more
 
-[:material-code-json: GeoJSON](https://geojson.org/){target=_blank} is a format for encoding a variety of geographic data structures.
+* [GeoParquet](https://geoparquet.org/){target=_blank}
 
-* [GeoJSON Specification](https://geojson.org){target=_blank}
+* [Geopackage](https://www.geopackage.org/){target=_blank}
 
-* [rfc7946](https://datatracker.ietf.org/doc/html/rfc7946){target=_blank}
+
+For a great description on cloud-native vector candidates check out this [blog](https://cholmes.medium.com/an-overview-of-cloud-native-vector-c223845638e0){target=_blank} by Chris Holmes 
+
+## GeoJSON (Geo+JSON)
+
+We are going to spend most of our time learning about the vector format [GeoJSON](https://en.wikipedia.org/wiki/GeoJSON){target=_blank}.
+
+GeoJSON is a format for encoding geographic data structures. It is based on the JSON (JavaScript Object Notation) format, which makes it easily readable and writable in a variety of programming languages. The GeoJSON format is widely used in web mapping applications and geospatial software because of its simplicity and versatility.
+
+??? Info "json & geojson technical details"
+
+    [JavaScript Object Notation (JSON)](https://www.json.org/json-en.html){target=_blank} is a lightweight, text-based, language-independent data interchange format. 
+
+    * [JSON syntax](https://www.w3schools.com/js/js_json_syntax.asp){target=_blank}
+    * [rfc7159](https://datatracker.ietf.org/doc/html/rfc7159){target=_blank}
+
+    [:material-code-json: GeoJSON](https://geojson.org/){target=_blank} is a format for encoding a variety of geographic data structures.
+
+    * [GeoJSON Specification](https://geojson.org){target=_blank}
+
+    * [rfc7946](https://datatracker.ietf.org/doc/html/rfc7946){target=_blank}
 
 A GeoJSON Object may represent a region of space: a **Geometry**, a **Feature**, or a list of Features called a **FeatureCollection**.
 
 ### :material-angle-acute: Geometry
 
 There are seven types of geometric shapes which can be defined in GeoJSON. Where the "type" can be any of the following:
-
-| Type | Geometry |
-| :--: | :--:     |
-|Point   |  ![Point](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/SFA_Point.svg/51px-SFA_Point.svg.png)|
-| LineString   |  ![Linestring](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/SFA_LineString.svg/51px-SFA_LineString.svg.png)|
-|Polygon   |   ![Polygon](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/SFA_Polygon.svg/51px-SFA_Polygon.svg.png) |
-|MultiPoint|  ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/SFA_MultiPoint.svg/51px-SFA_MultiPoint.svg.png)  |
-| MultiLineString  |    ![MultiLineString](https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/SFA_MultiLineString.svg/51px-SFA_MultiLineString.svg.png)|
-|MultiPolygon   |  ![MultiPolygon](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/SFA_MultiPolygon_with_hole.svg/51px-SFA_MultiPolygon_with_hole.svg.png)
-| GeometryCollection | ![GeometryCollection](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/SFA_GeometryCollection.svg/51px-SFA_GeometryCollection.svg.png) |
 
 * Point, LineString and Polygon are *single type geometry objects* 
 

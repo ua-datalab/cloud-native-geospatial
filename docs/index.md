@@ -23,11 +23,12 @@ Welcome! This is an introductory course on Cloud Native Geospatial. This course 
 <br/> Here are the topics we will cover:
 
 * [An overview of Cloud Storage, Sharing, and Computing](#lets-use-the-cloud)
-* [Integrated Development Environments (IDEs)](ide.md)
+* [Cloud Computing Platforms](ide.md) 
+* [Integrated Development Environments (IDEs)](ide.md#integrated-development-environments-ide)
 * Vector formats such as [GeoJSON](geojson.md)
-* Raster formats such as [Cloud Optimized GeoTIFF (COG)](cog.md), [xarray](xarray.md), and [zarr](zarr.md)
+* Raster formats such as [Cloud Optimized GeoTIFF (COG)](cog.md) and [zarr](zarr.md)
 * Point cloud format [Cloud Optimized Point Cloud (COPC)](copc.md)
-* [SpatioTemporal Asset Catalogs (STAC)](stac.md)
+* [SpatioTemporal Asset Catalogs (STAC)](stac.md) for data sharing and discovery
 
 <br/>
 Each topic will contain easy-to-understand descriptions, useful real-world examples, as well as hands-on exercises to create, use, and share cloud native formats. 

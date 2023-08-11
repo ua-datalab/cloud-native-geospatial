@@ -1,4 +1,4 @@
-![blah](images/midjourney_cloud.png){ width="300" }
+![blah](images/midjourney_cloud.png){ width="300" align="right" }
 
 As mentioned in the [introduction](index.md#cloud-compute), cloud computing is all about moving geospatial analysis and computation from your local machine to a remote machine in the cloud. This approach has several advantages over traditional desktop computing.
 
@@ -33,7 +33,7 @@ This [video](https://www.youtube.com/watch?v=HofrUehuEk4){target=_blank} gives a
 
 * [Earth Blox](https://www.earthblox.io/){target=_blank} is a non-coding interface for using GEE. This is commercial software, but reduced price for academic use.
 
-* You [import](https://developers.google.com/earth-engine/guides/image_overview){target=_blank} and and [export](https://developers.google.com/earth-engine/guides/exporting_images){target=_blank} Cloud Optimized Geotiffs in GEE
+* You can [import](https://developers.google.com/earth-engine/guides/image_overview){target=_blank} and [export](https://developers.google.com/earth-engine/guides/exporting_images){target=_blank} Cloud Optimized Geotiffs in GEE
 
 * [Awesome GEE Community Data Catalog](https://gee-community-catalog.org/){target=_blank}
 

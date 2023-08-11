@@ -1,40 +1,25 @@
-[Jump to :material-hand-clap: hands-on lesson :material-school: ](#hands-on)
-
 ## Overview of :material-file-cloud: Cloud Optimized Point Cloud (COPC)
 
 <a href="https://copc.io" style="float:center" target="blank" rel="copc">![copc](https://copc.io/COPC_IO-Logo-2color.png){ width="200" } </a> 
 
-A [Cloud Optimized Point Cloud](https://copc.io/){target=_blank} developed by [HOBU](https://hobu.co/){target=_blank} is similar in concept to the [COG](cog.md). It is an `.laz`(lasZip) format with additional point data organized in a clustered [octree](https://en.wikipedia.org/wiki/Octree){target=_blank}. This allows for http streaming of point cloud data from cloud storage (AWS S3, Google Cloud Storage, Azure Blob Storage, etc.) to a web browser or other applications. Just like a [COG](cog.md), it eliminates the need to download large datasets to a local machine for visualization and analysis. 
 
-For technical information on the formats, see the [COPC Specification](https://copc.io/copc-specification-1.0.pdf){target=_blank} and the [LAS Standard](https://www.asprs.org/a/society/committees/standards/LAS_1_4_r13.pdf){target=_blank}
+![point_cloud](images/lidar_tree.png){ align="right" width="200" height="300" }
+
+
+The [Cloud Optimized Point Cloud](https://copc.io/){target=_blank} developed by [HOBU](https://hobu.co/){target=_blank} is similar in concept to the [COG](cog.md). It is an `.laz`(lasZip) format with additional point data organized in a clustered [octree](https://en.wikipedia.org/wiki/Octree){target=_blank}. This allows for http streaming of point cloud data from cloud storage (AWS S3, Google Cloud Storage, Azure Blob Storage, etc.) to a web browser or other applications. Just like a [COG](cog.md), it eliminates the need to download large datasets to a local machine for visualization and analysis. 
 
 
 COPC is based on the open source compression file format, `*.LAZ`, which was developed by Martin Isenburg ([RIP](https://lidarmag.com/2021/10/30/in-memoriam-martin-isenburg-1972-2021/){target=_blank}) and is licensed by his company [RapidLASso](https://rapidlasso.de/){target=_blank} 
 
-<a href="https://rapidlasso.de/" target="blank" rel="rapidlasso">![rapidlasso](https://rapidlasso.de/wp-content/uploads/rapidlasso_square_256x2561.png){ width="100" } </a>
+<a href="https://hobu.co/" target="blank" rel="hobu">![hobu](images/hobu.png){ align="" width="100" } </a>
+<a href="https://rapidlasso.de/" target="blank" rel="rapidlasso">![rapidlasso](https://rapidlasso.de/wp-content/uploads/rapidlasso_square_256x2561.png){ align="center" width="100" } </a>
 
 
 
-<a href="https://pdal.io" target="blank" rel="pdal">![pdal](https://pdal.io/_images/pdal_logo.png){ width="100" } </a>
-
-[Point Data Abstraction Library (PDAL)](https://pdal.io){target=_blank} is a C++ library for translating and manipulating point cloud data.
-
-<a href="https://entwine.io" target="blank" rel="entwine">![entwine](https://entwine.io/_images/entwine_logo_2-color.png){ width="100" } </a>
-
-[Entwine](https://entwine.io){target=_blank} is a data organization library for massive point clouds, designed to conquer datasets of trillions of points as well as desktop-scale point clouds.
-
-HoBu was contracted by the USGS to process all of the 3DEP lidar data, these are now hosted on commercial cloud in both reqestor pays buckets and FOR FREE as Entwine Point Tiles: [https://usgs.entwine.io/](https://usgs.entwine.io/)
-
-* More information about these datasets can be found at https://registry.opendata.aws/usgs-lidar/ and at its GitHub page at https://github.com/hobu/usgs-lidar/
-
-* [USGS National Datasets Downloads](https://www.usgs.gov/faqs/can-national-map-data-be-downloaded-direct-links){target=_blank}
+For technical information on the formats, see the [COPC Specification](https://copc.io/copc-specification-1.0.pdf){target=_blank} and the [LAS Standard](https://www.asprs.org/a/society/committees/standards/LAS_1_4_r13.pdf){target=_blank}
 
 
-??? Tip "Installing Open Source Lidar tools"
-
-    [LASTools](https://rapidlasso.com/lastools/){target=_blank} is available for both open source and a paid licensed version
-
-    [PDAL.io](https://pdal.io/en/stable/download.html#current-release-s){target=_blank} - suggest using a Binary install using a package manager like `conda`.
+___
 
 ## Example COPCs Online
 
@@ -52,13 +37,23 @@ Here is a drone-based point cloud in the COPC format. It is 686 mb and stored in
 <a href="https://viewer.copc.io?state=ee15e0b9ae036865eaada9f398c2d27de94c2cde71bd92cf117156296bf46ab0" style="float:center" target="blank" rel="copc">![copc](images/copc1.png){ width="400" } </a> 
 
 
-
-
+___
 ## Applications that can Read COPC
 COPCs are just a special case of `laz`, so any application that can read `laz` can read COPC.
 
 QGIS, CloudCompare, Argis Pro, and PDAL can all read COPC
 
+<a href="https://pdal.io" target="blank" rel="pdal">![pdal](https://pdal.io/_images/pdal_logo.png){ width="100" } </a>
+
+[Point Data Abstraction Library (PDAL)](https://pdal.io){target=_blank} is a C++ library for translating and manipulating point cloud data.
+
+??? Tip "Installing Open Source Lidar tools"
+
+    [LASTools](https://rapidlasso.com/lastools/){target=_blank} is available for both open source and a paid licensed version
+
+    [PDAL.io](https://pdal.io/en/stable/download.html#current-release-s){target=_blank} - suggest using a Binary install using a package manager like `conda`.
+
+___    
 ## Create your own COPC
 
 These data were converted from USGS 3DEP EPT data using PDAL `pipeline` 
@@ -154,3 +149,14 @@ These data were converted from USGS 3DEP EPT data using PDAL `pipeline`
 [OGC LAS Standard](https://www.ogc.org/standards/LAS){target=_blank}
 
 [USGS NGS Lidar Base Specification](https://www.usgs.gov/ngp-standards-and-specifications/lidar-base-specification-online){target=_blank}
+
+
+<a href="https://entwine.io" target="blank" rel="entwine">![entwine](https://entwine.io/_images/entwine_logo_2-color.png){ width="100" } </a>
+
+[Entwine](https://entwine.io){target=_blank} is a data organization library for massive point clouds, designed to conquer datasets of trillions of points as well as desktop-scale point clouds.
+
+HoBu was contracted by the USGS to process all of the 3DEP lidar data, these are now hosted on commercial cloud in both reqestor pays buckets and FOR FREE as Entwine Point Tiles: [https://usgs.entwine.io/](https://usgs.entwine.io/)
+
+* More information about these datasets can be found at https://registry.opendata.aws/usgs-lidar/ and at its GitHub page at https://github.com/hobu/usgs-lidar/
+
+* [USGS National Datasets Downloads](https://www.usgs.gov/faqs/can-national-map-data-be-downloaded-direct-links){target=_blank}

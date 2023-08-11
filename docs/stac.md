@@ -26,7 +26,7 @@ Browsing through STAC catalogs to find data or imagery of interest can be done b
 Use Case 1: A researcher wants to find all the Sentinel-2 imagery that is available for a particular area of interest. They can search the [STAC Index](https://stacindex.org/) for all the STACs that contain Sentinel-2 imagery. They can then search the STACs for the imagery that they need.
 
 <figure markdown>
-  ![Image title](images/stac3.png){ width="500" }
+  ![Image title](images/stac3.png){ width="650" }
   <figcaption> </figcaption>
 </figure>
 

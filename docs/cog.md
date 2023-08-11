@@ -50,41 +50,35 @@ There are numerous cloud based data stores hosting COGs, take a look through a f
 * [ESA Sentinel-2 COGs](https://registry.opendata.aws/sentinel-2-l2a-cogs/){target=_blank}
 
 
-* [Planet](https://www.planet.com/) is streaming out their imagery as COGs. You can also do simple analysis of COGs direclyt within the Planet platform. 
+* [Planet](https://www.planet.com/) is streaming out their imagery as COGs. You can also do simple analysis of COGs directly within the Planet platform. 
 
-* This example COG is a drone orthomosaic that is hosted in Cyverse Data Store. We can stream it to this viewer. [Example COG in Cogeo Map](https://www.cogeo.org/map/#/url/https%3A%2F%2Fdata.cyverse.org%2Fdav-anon%2Fiplant%2Fhome%2Fjgillan%2FSTAC_drone%2F22_2_ortho_cog.tif/center/-110.84602,31.78408/zoom/18){target=_blank}
+* This [example COG](https://www.cogeo.org/map/#/url/https%3A%2F%2Fdata.cyverse.org%2Fdav-anon%2Fiplant%2Fhome%2Fjgillan%2FSTAC_drone%2F22_2_ortho_cog.tif/center/-110.84602,31.78408/zoom/18){target=_blank} is a drone orthomosaic that is hosted in Cyverse Data Store. We can stream it to the [CogEO Viewer](https://www.cogeo.org/map/){target=_blank}. 
 
-* The COG is on Cyverse Data Store: https://data.cyverse.org/dav-anon/iplant/home/jgillan/STAC_drone/22_2_ortho_cog.tif
-
-* Here is another [example](https://www.cogeo.org/map/#/url/https%3A%2F%2Foin-hotosm.s3.us-east-1.amazonaws.com%2F64d1bd4419cb3a000147a56a%2F0%2F64d1bd4419cb3a000147a56b.tif/center/-90.68608,42.49636/zoom/17){target=_blank} of drone imagery COG from [OpenAerialMap](https://openaerialmap.org/){target=_blank}. The data is hosted on AWS and streamed to the cogeo viewer 
+* Here is another [example](https://www.cogeo.org/map/#/url/https%3A%2F%2Foin-hotosm.s3.us-east-1.amazonaws.com%2F64d1bd4419cb3a000147a56a%2F0%2F64d1bd4419cb3a000147a56b.tif/center/-90.68608,42.49636/zoom/17){target=_blank} of drone imagery COG from [OpenAerialMap](https://openaerialmap.org/){target=_blank}. The data is hosted on AWS and streamed to the [CogEO Viewer](https://www.cogeo.org/map/){target=_blank}. 
 ___
 
 ### Applications that can use COGs
 
-https://www.cogeo.org/map/
+**COGs are geotiffs**, so any software application that can read and work with geotiffs will be able to read and work with COGs. This includes QGIS, ArcGIS, and Google Earth Engine.
 
-[COGEO.xyz](https://cogeo.xyz/){target=_blank}
+??? Tip "Stream COGs into QGIS"
+
+    1. Open QGIS
+
+    2. In the "Layers" then "Add Layer" and then "Add Raster Layer" 
+
+    3. Choose the Source Type and select "Protocol: HTTP(s), cloud, etc" for a file on your computer
+    
+    4. Enter a valid `https://` in the `URl` field for a COG you found online
+    <br/><br/>
+
+    ![qgis](images/qgis_screenshot.png){ width="400" align="center" }
 
 
-Stream into Qgis
+* You can stream COGs into ArcGIS Pro following this [tutorial](https://opengislab.com/blog/2021/4/25/accessing-cloud-optimized-geotiffs-in-arcgis-pro){target=_blank}.
 
-open a COG in QGIS
 
-* Open QGIS
-
-* In the "Layers" then "Add Layer" and then "Add Raster Layer" 
-
-* Choose the Source Type and select "Protocol: HTTP(s), cloud, etc" for a file on your computer
-
-* Enter a valid `https://` in the `URl` field for a COG you found online
-
-Stream into ArcGIS Pro
-
-Stream into ArcGIS Online
-
-What kind of analysis can I do on a COG?
-
-* GEE can read and write COGs
+* You can [import](https://developers.google.com/earth-engine/guides/image_overview){target=_blank} and [export](https://developers.google.com/earth-engine/guides/exporting_images){target=_blank} Cloud Optimized Geotiffs in GEE
 
 ___
 
@@ -162,21 +156,13 @@ gdaladdo \
 
 
 
-
-## Example COGs in WebGL
-
-[Open Layers COGs](https://openlayers.org/en/latest/examples/cog.html){target=_blank}
-
-[Open Layers WebGLTile Pyramid from COG](https://openlayers.org/en/latest/examples/cog-pyramid.html){target=_blank}
-
-
 [COGS in Production blog post by Sean Rennie](https://sean-rennie.medium.com/cogs-in-production-e9a42c7f54e4){target=_blank}
 
 
+___
 
 
-
-### If I have COGs, do I still need a tile server? 
+## If I have COGs, do I still need a tile server? 
 There are a few reasons why you might still want to use a tile server with COGs:
 
 * Performance: Tile servers can cache tiles in memory, which can improve performance by reducing the number of times that tiles need to be read from disk.
