@@ -2,23 +2,18 @@
 
 ## Overview of :material-file-cloud: Cloud Optimized Point Cloud (COPC)
 
-A [Cloud Optimized Point Cloud](https://copc.io/){target=_blank} is a `.laz` file `v1.4` that stores point data organized in a clustered [octree](https://en.wikipedia.org/wiki/Octree){target=_blank}. 
+<a href="https://copc.io" style="float:center" target="blank" rel="copc">![copc](https://copc.io/COPC_IO-Logo-2color.png){ width="200" } </a> 
 
-[COPC Specification](https://copc.io/copc-specification-1.0.pdf){target=_blank}
+A [Cloud Optimized Point Cloud](https://copc.io/){target=_blank} developed by [HOBU](https://hobu.co/){target=_blank} is similar in concept to the [COG](cog.md). It is an `.laz`(lasZip) format with additional point data organized in a clustered [octree](https://en.wikipedia.org/wiki/Octree){target=_blank}. This allows for http streaming of point cloud data from cloud storage (AWS S3, Google Cloud Storage, Azure Blob Storage, etc.) to a web browser or other applications. Just like a [COG](cog.md), it eliminates the need to download large datasets to a local machine for visualization and analysis. 
 
-[LAS Standard](https://www.asprs.org/a/society/committees/standards/LAS_1_4_r13.pdf){target=_blank}
+For technical information on the formats, see the [COPC Specification](https://copc.io/copc-specification-1.0.pdf){target=_blank} and the [LAS Standard](https://www.asprs.org/a/society/committees/standards/LAS_1_4_r13.pdf){target=_blank}
 
-A COPC contains a [variable length record (VLR)](https://pdal.io/en/stable/tutorial/las.html?highlight=VLR#variable-length-records){target=_blank} that describe the octree organization of data that arestored in LAZ 1.4 chunks
 
-COPC would not be possible without the Open Source compression file format, `*.LAZ`, which was developed by Martin Isenburg ([RIP](https://lidarmag.com/2021/10/30/in-memoriam-martin-isenburg-1972-2021/){target=_blank}) and is licensed by his company [RapidLASso](https://rapidlasso.de/){target=_blank} 
+COPC is based on the open source compression file format, `*.LAZ`, which was developed by Martin Isenburg ([RIP](https://lidarmag.com/2021/10/30/in-memoriam-martin-isenburg-1972-2021/){target=_blank}) and is licensed by his company [RapidLASso](https://rapidlasso.de/){target=_blank} 
 
 <a href="https://rapidlasso.de/" target="blank" rel="rapidlasso">![rapidlasso](https://rapidlasso.de/wp-content/uploads/rapidlasso_square_256x2561.png){ width="100" } </a>
 
-### Background on COPC
 
- <a href="https://hobu.co" target="blank" rel="hobu">![hobu](https://hobu.co/theme/images/hobulogo.png){ width="100" } </a>
-
-[HoBu Inc.](https://hobu.co/){target=_blank} open source license their software for working with a wide variety of lidar data types. Hobu's portfolio now includes:
 
 <a href="https://pdal.io" target="blank" rel="pdal">![pdal](https://pdal.io/_images/pdal_logo.png){ width="100" } </a>
 
@@ -34,7 +29,6 @@ HoBu was contracted by the USGS to process all of the 3DEP lidar data, these are
 
 * [USGS National Datasets Downloads](https://www.usgs.gov/faqs/can-national-map-data-be-downloaded-direct-links){target=_blank}
 
-<a href="https://copc.io" target="blank" rel="copc">![copc](https://copc.io/COPC_IO-Logo-2color.png){ width="100" } </a>
 
 ??? Tip "Installing Open Source Lidar tools"
 
@@ -42,15 +36,30 @@ HoBu was contracted by the USGS to process all of the 3DEP lidar data, these are
 
     [PDAL.io](https://pdal.io/en/stable/download.html#current-release-s){target=_blank} - suggest using a Binary install using a package manager like `conda`.
 
-# Hands On
+## Example COPCs Online
 
-## **Step 1** Go to [COPC.io Viewer](https://viewer.copc.io/){target=_blank}
 
-The [viewer.copc.io](https://viewer.copc.io/){target=_blank} is an experimental Viewer for EPT and COPC point clouds hosted over `https://`
-
-The COPC viewer can dynamically view COPC processed `.laz` that are stored on the internet. 
+The [viewer.copc.io](https://viewer.copc.io/){target=_blank} is an experimental Viewer for EPT and COPC point clouds hosted over `https://`. It can dynamically view COPC processed `.laz` that are stored online.  
 
 [COPC Viewer Example of 3DEP lidar over Prescott AZ from USGS](https://viewer.copc.io/?copc=https://data.cyverse.org/dav-anon/iplant/home/tswetnam/agic-2022/USGS_LPC_AZ_VerdeKaibab_B2_TL_2018_LAS_2019.copc.laz)
+
+I have staged one here: `https://data.cyverse.org/dav-anon/iplant/home/tswetnam/agic-2022/USGS_LPC_AZ_VerdeKaibab_B2_TL_2018_LAS_2019.copc.laz` 
+
+
+Here is a drone-based point cloud in the COPC format. It is 686 mb and stored in Cyverse Data Store.
+
+
+<a href="https://viewer.copc.io?state=ee15e0b9ae036865eaada9f398c2d27de94c2cde71bd92cf117156296bf46ab0" style="float:center" target="blank" rel="copc">![copc](images/copc1.png){ width="400" } </a> 
+
+
+
+
+## Applications that can Read COPC
+COPCs are just a special case of `laz`, so any application that can read `laz` can read COPC.
+
+QGIS, CloudCompare, Argis Pro, and PDAL can all read COPC
+
+## Create your own COPC
 
 These data were converted from USGS 3DEP EPT data using PDAL `pipeline` 
 
@@ -135,17 +144,6 @@ These data were converted from USGS 3DEP EPT data using PDAL `pipeline`
 
     When the pdal script completes, you will have two files: (1) a new `.laz` file with COPC baked into it, and (2) a digital elevation model GeoTIFF generated by GDAL.
 
-## **Step 2** Find a COPC file on the internet
-
-At the moment, there are not many COPC being hosted publicly online. 
-
-I have staged one here: `https://data.cyverse.org/dav-anon/iplant/home/tswetnam/agic-2022/USGS_LPC_AZ_VerdeKaibab_B2_TL_2018_LAS_2019.copc.laz` 
-
-You may choose to download this file to your local computer and you can view it with QGIS or some other point cloud viewer, however, that is not the point of this workshop! We want to keep our large files up on the cloud.
-
-You can use the same `https://` address to view this file in QGIS.
-
-## COPC Creation
 
 [Planetary Computer 3DEP Jupyter Notebook](https://github.com/microsoft/PlanetaryComputerExamples/blob/main/datasets/3dep-lidar/3dep-lidar-copc-example.ipynb){target=_blank}
 
