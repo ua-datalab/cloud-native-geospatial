@@ -15,27 +15,27 @@ ___
 
 <a href="https://earthengine.google.com/ style="float:left" target="blank" rel="app">![app](images/gee2.png){ width="100" } </a>
 
+Google Earth Engine is a cloud-based platform that enables users to process and analyze geospatial data. It provides access to a massive collection of satellite imagery, weather data, and other geospatial datasets. Users can use Earth Engine to visualize data, create maps, and run geospatial analysis. This [video](https://www.youtube.com/watch?v=HofrUehuEk4){target=_blank} gives a gentle introduction to GEE and is aimed at non-coders.
 
-* 70 pb and 800+ curated [geospatial datasets](https://developers.google.com/earth-engine/datasets){target=_blank}, including 40 years of satellite imagery 
+Here are some of the key features of GEE:
+
+* 70 pb and 800+ curated [geospatial datasets](https://developers.google.com/earth-engine/datasets){target=_blank}, including 40 years of satellite imagery. Check out [Awesome GEE Community Data Catalog](https://gee-community-catalog.org/){target=_blank} for a curated list of community contributed datasets.
+
+* Cloud-based processing: Earth Engine is a cloud-based platform, so users can process data without having to worry about setting up or maintaining their own infrastructure. This makes it easy to get started with Earth Engine and to scale your analysis as needed.
+
+* Code can be worked on collaboratively. You can share your code with others, and you can also use Earth Engine to work on code together in real-time.
 
 * 250 GB of free storage for your own data
 
-* Javascript code editor to execute commands
-
-* Use GEE python [library](https://developers.google.com/earth-engine/guides/python_install){target=_blank} to interact with GEE from your IDE
-
-* You can create GEE 'apps' which are basically mini web sites to interact with data. Check out this [example app showcasing drone imagery](https://bit.ly/srer-drone-2019){target=_blank}.
-
-<a href="https://bit.ly/srer-drone-2019" style="float:center" target="blank" rel="app">![app](images/gee_app.png){ width="500" } </a>
-
-
-This [video](https://www.youtube.com/watch?v=HofrUehuEk4){target=_blank} gives a gentle introduction to GEE and is aimed at non-coders
+* Executing commands occurs in a Javascript code editor, but you can also use the GEE Python [library](https://developers.google.com/earth-engine/guides/python_install){target=_blank} to interact with GEE from your IDE
 
 * [Earth Blox](https://www.earthblox.io/){target=_blank} is a non-coding interface for using GEE. This is commercial software, but reduced price for academic use.
 
+* You can create GEE 'apps' which are basically mini web sites to interact with data. Check out this [example app showcasing drone imagery](https://bit.ly/srer-drone-2019){target=_blank}.
+
 * You can [import](https://developers.google.com/earth-engine/guides/image_overview){target=_blank} and [export](https://developers.google.com/earth-engine/guides/exporting_images){target=_blank} Cloud Optimized Geotiffs in GEE
 
-* [Awesome GEE Community Data Catalog](https://gee-community-catalog.org/){target=_blank}
+
 
 
 </br>

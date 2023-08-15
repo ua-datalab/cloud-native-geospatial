@@ -72,7 +72,7 @@ ___
     4. Enter a valid `https://` in the `URl` field for a COG you found online
     <br/><br/>
 
-    ![qgis](images/qgis_screenshot.png){ width="400" align="center" }
+    ![qgis](images/qgis_screenshot.png){ width="600" align="center" }
 
 
 * You can stream COGs into ArcGIS Pro following this [tutorial](https://opengislab.com/blog/2021/4/25/accessing-cloud-optimized-geotiffs-in-arcgis-pro){target=_blank}.
@@ -163,7 +163,9 @@ ___
 
 
 ## If I have COGs, do I still need a tile server? 
-There are a few reasons why you might still want to use a tile server with COGs:
+The breakthrough of COGs is that they have internal tiling which allows them to be streamed into applications without the need for an additional tile server. For most individuals and small organizations, this should be all you need. 
+
+However, there are a few reasons why you might still want to use a tile server with COGs:
 
 * Performance: Tile servers can cache tiles in memory, which can improve performance by reducing the number of times that tiles need to be read from disk.
 
@@ -171,16 +173,15 @@ There are a few reasons why you might still want to use a tile server with COGs:
 
 * Security: Tile servers can be used to encrypt tiles, which can help to protect them from unauthorized access. If you are streaming COGs to a large number of clients or if you need to ensure that your tiles are secure, then I recommend using a tile server. However, if you are only streaming COGs to a small number of clients and you do not need to worry about security, then you can use the built-in tiles in COGs.
 
+## How are COGs different from XYZ and WMTS tiles?
 
-WMTS - Web Map Tile Service - best for use with desktop applications
-
-XYZ - best for use with web applications
-
-WMTS and XYZ tiles are primarily designed for efficient map display in web environments. Their main goal is to provide quick and seamless map visualizations over the internet by serving small, pre-defined tiles at multiple zoom levels. These tiles are ideal for web maps where users might pan and zoom around the globe, as the small tiles can be fetched and displayed rapidly.
+Web mapping tile services (WMTS) and XYZ tiles are primarily designed for efficient map display in web environments. Their main goal is to provide quick and seamless map visualizations over the internet by serving small, pre-defined tiles at multiple zoom levels. These tiles are ideal for web maps where users might pan and zoom around the globe, as the small tiles can be fetched and displayed rapidly.
 
 However, for analysis purposes – where users might want to compute statistics, apply algorithms, or extract detailed information from imagery or raster data – these tiling methods are not optimal. The reason is that analysis often requires access to raw, high-resolution data rather than the downsampled or potentially lossy representations provided by these tiles.
 
 That's where formats like Cloud Optimized GeoTIFFs (COGs) come into play. COGs are designed to allow for efficient access to high-resolution raster datasets, making them more suited for analytical purposes. With COGs, one can access and process only specific portions of a large raster without downloading the entire file, making it efficient for cloud-based analysis workflows.
+
+**In summary, COGs are designed for efficient access to high-resolution raster data, while XYZ and WMTS tiles are designed for efficient map display.**
 
 
 
