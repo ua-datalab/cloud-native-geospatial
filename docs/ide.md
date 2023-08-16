@@ -29,13 +29,11 @@ Here are some of the key features of GEE:
 
 * Executing commands occurs in a Javascript code editor, but you can also use the GEE Python [library](https://developers.google.com/earth-engine/guides/python_install){target=_blank} to interact with GEE from your IDE
 
-* [Earth Blox](https://www.earthblox.io/){target=_blank} is a non-coding interface for using GEE. This is commercial software, but reduced price for academic use.
-
 * You can create GEE 'apps' which are basically mini web sites to interact with data. Check out this [example app showcasing drone imagery](https://bit.ly/srer-drone-2019){target=_blank}.
 
 * You can [import](https://developers.google.com/earth-engine/guides/image_overview){target=_blank} and [export](https://developers.google.com/earth-engine/guides/exporting_images){target=_blank} Cloud Optimized Geotiffs in GEE
 
-
+* [Earth Blox](https://www.earthblox.io/){target=_blank} is a non-coding interface for using GEE. This is commercial software, but reduced price for academic use.
 
 
 </br>
@@ -44,42 +42,44 @@ ___
 ### Microsoft Planetary Computer
 <a href="https://planetarycomputer.microsoft.com/" align="right" target="blank" rel="MPC">![MPC](images/MPC2.jpeg){ width="300" } </a>
 
+The Microsoft Planetary Computer (PC) is a platform that lets users leverage the power of the cloud to accelerate environmental sustainability and Earth science. It is a competitor to Google Earth Engine, but runs on Microsoft Azure cloud infrastructure.
+
+PC has a large [Data Catalog](https://planetarycomputer.microsoft.com/catalog){target=_blank}. All of the datasets are indexed using the SpatioTemporal Asset Catalog (STAC) [standard API](https://radiantearth.github.io/stac-browser/#/external/planetarycomputer.microsoft.com/api/stac/v1/){target=_blank}.
+
+Using the Planetary Computer HUB, you have a choice of how to interact with the Computer: 
+
+1. You can interact with it using Python or R in a Jupyter Notebook environment. When launching a Jupyter Notebook, the environment uses a Pangeo Notebook, which means it is preloaded with a lot [geospatial python libraries](https://github.com/pangeo-data/pangeo-docker-images/blob/master/pangeo-notebook/packages.txt){target=_blank}. You can also access PC through your local version of [VS Code](https://planetarycomputer.microsoft.com/docs/overview/ui-vscode/){target=_blank}
+
+
+2. You can open a QGIS instance on PC, and load data using the [STAC plugin](https://stacspec.org/en/tutorials/1-install-stac-api-browser-qgis-plugin/){target=_blank}. 
+3. You can now access Planetary Computer Data Catalog from [ArcGIS Pro](https://www.esri.com/en-us/c/product/arcgis-for-microsoft-planetary-computer){target=_blank}
+
 <figure markdown>
   ![Image title](images/MPC.png){ width="500" }
   <figcaption> </figcaption>
 </figure>
-* Using the Planetary Computer HUB, You can interact with it using Python or R in a Jupyter Notebook environment
 
-* When launching a Jupyter Notebook, the environment uses a Pangeo Notebook, which means it is preloaded with a lot [geospatial python libraries](https://github.com/pangeo-data/pangeo-docker-images/blob/master/pangeo-notebook/packages.txt){target=_blank}. 
+??? Tip "Python Libraries for Planetary Computer"
 
-```
-import pystac_client
-import planetary_computer
+    ```
+    pip install pystac_client
+    pip install planetary_computer
+  
+    import pystac_client
+    import planetary_computer
 
-catalog = pystac_client.Client.open(
-    "https://planetarycomputer.microsoft.com/api/stac/v1/",
-    modifier=planetary_computer.sign_inplace,
-)
-point = {"type": "Point", "coordinates": [-112.107676, 36.101690]}
-search = catalog.search(collections=["nasadem"], intersects=point, limit=1)
-item = next(search.get_items())
-item
-```
-
-
-
-
-* [Planetary Computer Data Catalog](https://planetarycomputer.microsoft.com/catalog){target=_blank} 
-
-* You can open a QGIS instance on MPC, and load data using the STAC plugin. 
-
-* You can connect to Planetary Computer using a local instance of VS Code
-
-* All of the datasets are indexed using the SpatioTemporal Asset Catalog (STAC) standard API
-
-* You can now access Planetary Computer Data Catalog from [ArcGIS Pro](https://www.esri.com/en-us/c/product/arcgis-for-microsoft-planetary-computer){target=_blank}
-
+    catalog = pystac_client.Client.open(
+        "https://planetarycomputer.microsoft.com/api/stac/v1/",
+        modifier=planetary_computer.sign_inplace,
+    )
+    point = {"type": "Point", "coordinates": [-112.107676, 36.101690]}
+    search = catalog.search(collections=["nasadem"], intersects=point, limit=1)
+    item = next(search.get_items())
+    item
+    ```
+</br>
 ___
+
 ### Integrated Development Environments (IDE) 
 
 IDEs are graphic user interfaces (GUI) for working with code and data.

@@ -84,11 +84,13 @@ ___
 
 ### Creating Your Own COGs
 
-#### GDAL
+#### Using GDAL
+
+Geospatial Data Abstration Library (GDAL) is an open source library for working with geospatial data.[Most GIS software](https://gdal.org/software_using_gdal.html#software-using-gdal){target=_blank} use GDAL. For regular users, GDAL is a command line tool.
 
 The lastest versions of [GDAL](https://gdal.org){target=_blank} (>v3.1) have [COG generator](https://gdal.org/drivers/raster/cog.html){target=_blank} installed by default.
 
-[Most GIS software](https://gdal.org/software_using_gdal.html#software-using-gdal){target=_blank} use GDAL.
+
 
 ??? Tip "Install GDAL"
 
@@ -106,8 +108,6 @@ The lastest versions of [GDAL](https://gdal.org){target=_blank} (>v3.1) have [CO
 
 
 
-create a COG from a GeoTIFF
-
 Open a console and check your `gdal` installation
 
 ``` bash
@@ -116,7 +116,6 @@ gdalinfo --version
 
 Make sure that you're operating on at least `v3.1` of GDAL (current latest `v3.5.1`)
 
-[Sample USGS GeoTIFFs](https://pubs.usgs.gov/ds/121/prescott/prescott.html){target=_blank}
 
 ``` bash
 gdal_translate p_ndvi_cor.tif p_ndvi_cor_cog.tif \
@@ -144,23 +143,16 @@ gdaladdo \
 ```
 
 
-#### Cogger
+#### Using Cogger
 
 * [`cogger`](https://github.com/airbusgeo/cogger){target=_blank} is a rapid COG generator from GeoTIFF
 
 
-#### Python library Rio-cogeo - RasterIO plugin to create and validate COGs
+#### Using Python 
 
-
-
-
-
-
-[COGS in Production blog post by Sean Rennie](https://sean-rennie.medium.com/cogs-in-production-e9a42c7f54e4){target=_blank}
-
+library Rio-cogeo - RasterIO plugin to create and validate COGs
 
 ___
-
 
 ## If I have COGs, do I still need a tile server? 
 The breakthrough of COGs is that they have internal tiling which allows them to be streamed into applications without the need for an additional tile server. For most individuals and small organizations, this should be all you need. 
@@ -184,4 +176,10 @@ That's where formats like Cloud Optimized GeoTIFFs (COGs) come into play. COGs a
 **In summary, COGs are designed for efficient access to high-resolution raster data, while XYZ and WMTS tiles are designed for efficient map display.**
 
 
+## Resources
 
+[COGS in Production blog post by Sean Rennie](https://sean-rennie.medium.com/cogs-in-production-e9a42c7f54e4){target=_blank}
+
+[Blog on COGs](https://www.postholer.com/portfolio/index.php?example=serverless){target=_blank}
+
+[Mapscaping on COGS](https://mapscaping.com/complete-guide-to-cloud-optimized-geotiffs/){target=_blank}
