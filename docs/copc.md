@@ -23,18 +23,17 @@ ___
 
 ## Example COPCs Online
 
-
-The [viewer.copc.io](https://viewer.copc.io/){target=_blank} is an experimental Viewer for EPT and COPC point clouds hosted over `https://`. It can dynamically view COPC processed `.laz` that are stored online.  
-
-[COPC Viewer Example of 3DEP lidar over Prescott AZ from USGS](https://viewer.copc.io/?copc=https://data.cyverse.org/dav-anon/iplant/home/tswetnam/agic-2022/USGS_LPC_AZ_VerdeKaibab_B2_TL_2018_LAS_2019.copc.laz)
-
-I have staged one here: `https://data.cyverse.org/dav-anon/iplant/home/tswetnam/agic-2022/USGS_LPC_AZ_VerdeKaibab_B2_TL_2018_LAS_2019.copc.laz` 
-
-
-Here is a drone-based point cloud in the COPC format. It is 686 mb and stored in Cyverse Data Store.
+Here is a drone-based point cloud in the COPC format. It is 686 mb and stored in Cyverse Data Store [here](https://data.cyverse.org/dav-anon/iplant/home/jgillan/USGA/imagery_products/hole17_point_cloud.copc.laz){target=_blank}. You can view it [here](https://viewer.copc.io?state=ee15e0b9ae036865eaada9f398c2d27de94c2cde71bd92cf117156296bf46ab0){target=_blank} using the [COPC Viewer](https://viewer.copc.io/){target=_blank}.
 
 
 <a href="https://viewer.copc.io?state=ee15e0b9ae036865eaada9f398c2d27de94c2cde71bd92cf117156296bf46ab0" style="float:center" target="blank" rel="copc">![copc](images/copc1.png){ width="400" } </a> 
+
+
+
+[Here](https://viewer.copc.io/?copc=https://data.cyverse.org/dav-anon/iplant/home/tswetnam/agic-2022/USGS_LPC_AZ_VerdeKaibab_B2_TL_2018_LAS_2019.copc.laz){target=_blanck} is another COPC example. It is 3DEP lidar data over Prescott, AZ. It is also stored in the Cyverse Data Store [here](https://data.cyverse.org/dav-anon/iplant/home/tswetnam/agic-2022/USGS_LPC_AZ_VerdeKaibab_B2_TL_2018_LAS_2019.copc.laz){target=_blank}.
+
+
+
 
 
 ___
@@ -43,9 +42,7 @@ COPCs are just a special case of `laz`, so any application that can read `laz` c
 
 QGIS, CloudCompare, Argis Pro, and PDAL can all read COPC
 
-<a href="https://pdal.io" target="blank" rel="pdal">![pdal](https://pdal.io/_images/pdal_logo.png){ width="100" } </a>
 
-[Point Data Abstraction Library (PDAL)](https://pdal.io){target=_blank} is a C++ library for translating and manipulating point cloud data.
 
 ??? Tip "Installing Open Source Lidar tools"
 
@@ -55,6 +52,12 @@ QGIS, CloudCompare, Argis Pro, and PDAL can all read COPC
 
 ___    
 ## Create your own COPC
+
+![blah](https://pdal.io/_images/pdal_logo.png){ width="100" align="right" }
+
+The best toolset to creat your own COPC point clouds is PDAL. [Point Data Abstraction Library (PDAL)](https://pdal.io){target=_blank} is a C++ library for translating and manipulating point cloud data.
+
+
 
 These data were converted from USGS 3DEP EPT data using PDAL `pipeline` 
 
@@ -151,12 +154,3 @@ These data were converted from USGS 3DEP EPT data using PDAL `pipeline`
 [USGS NGS Lidar Base Specification](https://www.usgs.gov/ngp-standards-and-specifications/lidar-base-specification-online){target=_blank}
 
 
-<a href="https://entwine.io" target="blank" rel="entwine">![entwine](https://entwine.io/_images/entwine_logo_2-color.png){ width="100" } </a>
-
-[Entwine](https://entwine.io){target=_blank} is a data organization library for massive point clouds, designed to conquer datasets of trillions of points as well as desktop-scale point clouds.
-
-HoBu was contracted by the USGS to process all of the 3DEP lidar data, these are now hosted on commercial cloud in both reqestor pays buckets and FOR FREE as Entwine Point Tiles: [https://usgs.entwine.io/](https://usgs.entwine.io/)
-
-* More information about these datasets can be found at https://registry.opendata.aws/usgs-lidar/ and at its GitHub page at https://github.com/hobu/usgs-lidar/
-
-* [USGS National Datasets Downloads](https://www.usgs.gov/faqs/can-national-map-data-be-downloaded-direct-links){target=_blank}
