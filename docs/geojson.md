@@ -1,27 +1,13 @@
 
 [Jump to :material-hand-clap: hands-on lesson :material-school: ](#hands-on)
 
-## Cloud-Native Vector Format?
-
-There are many different vector formats that are used to represent spatial data across the web. There is currently not a 'go-to' format, but many are in active development to be considered 'cloud-native' (i.e., streamable across http). 
-
-Here are some of these vector formats:
-
-* [Flatgeobuf](http://flatgeobuf.org/){target=_blank} - 
-Check out this [blog](https://worace.works/2022/02/23/kicking-the-tires-flatgeobuf/){target=_blank} to learn more
-
-* [GeoParquet](https://geoparquet.org/){target=_blank}
-
-* [Geopackage](https://www.geopackage.org/){target=_blank}
-
-
-For a great description on cloud-native vector candidates check out this [blog](https://cholmes.medium.com/an-overview-of-cloud-native-vector-c223845638e0){target=_blank} by Chris Holmes 
-
 ## GeoJSON (Geo+JSON)
 
-We are going to spend most of our time learning about the vector format [GeoJSON](https://en.wikipedia.org/wiki/GeoJSON){target=_blank}.
+Though [GeoJSON](https://en.wikipedia.org/wiki/GeoJSON){target=_blank} is not specifically considered cloud-native, it is a very popular format for encoding geographic data for web mapping. 
 
-GeoJSON is a format for encoding geographic data structures. It is based on the JSON (JavaScript Object Notation) format, which makes it easily readable and writable in a variety of programming languages. The GeoJSON format is widely used in web mapping applications and geospatial software because of its simplicity and versatility.
+We are covering it here in the course because json and geojson files are used as metadata for [SpatioTemporal Asset Catalogs (STAC)](stac.md). A basic understanding of them will be useful for grasping STAC.   
+
+GeoJSON is based on the JSON (JavaScript Object Notation) format, which makes it easily readable and writable in a variety of programming languages. The GeoJSON format is widely used in web mapping applications and geospatial software because of its simplicity and versatility.
 
 ??? Info "json & geojson technical details"
 

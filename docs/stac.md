@@ -545,3 +545,4 @@ Generating your own STACs can be done manually, programmatically, or using a tem
 * [Scene Explorer ESRI](https://www.esri.com/en-us/arcgis-marketplace/listing/products/b1689f3ddcf742de988e0d5a070b31c4){target=_blank}
 
 
+[Python code to create STAC using a Jupyter Notebook](https://github.com/cyverse-gis/cyverse-stac/blob/main/scripts/STAC_creation_latest.ipynb){target=_blank}

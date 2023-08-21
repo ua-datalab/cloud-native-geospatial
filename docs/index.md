@@ -17,7 +17,10 @@
 
 
 ## About This Course
-Welcome! This is an introductory course on Cloud Native Geospatial. This course is for GIS professionals, researchers, remote sensing professionals, and anyone that creates, analyzes, and shares geospatial data. Throughout, we will emphasize Open Science principles such as [FAIR](https://www.go-fair.org/fair-principles/){target=_blank} and [CARE](https://www.gida-global.org/care){target=_blank}, and highlight primarily Open Source tools. 
+The future of geographic information systems (GIS) and geoinformatics is in the cloud. Geospatial data are some of the largest and most important data produced today. Working with the massive volume of GIS data that are now hosted on commercial cloud requires GIS specialists and researchers to take a cloud-native approach to working with their data.  
+
+Geospatial data formats are evolving toward being completely cloud-native, meaning that they can be instantly searched, queried, and analyzed on the cloud using cyberGIS without the expectation that they be downloaded to a local workstation or laptop for analysis. There is already a growing ecosystem of software applications for working with these data which are open-source and open-access.  
+
 
 
 <br/> Here are the topics we will cover:
@@ -31,7 +34,7 @@ Welcome! This is an introductory course on Cloud Native Geospatial. This course 
 * [SpatioTemporal Asset Catalogs (STAC)](stac.md) for data sharing and discovery
 
 <br/>
-Each topic will contain easy-to-understand descriptions, useful real-world examples, as well as hands-on exercises to create, use, and share cloud native formats. 
+Throughout, we will emphasize Open Science principles such as [FAIR](https://www.go-fair.org/fair-principles/){target=_blank} and [CARE](https://www.gida-global.org/care){target=_blank}, and highlight primarily Open Source tools. 
 
 <br/>
  Helpful skills to have
