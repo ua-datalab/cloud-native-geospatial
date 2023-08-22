@@ -183,3 +183,5 @@ That's where formats like Cloud Optimized GeoTIFFs (COGs) come into play. COGs a
 [Blog on COGs](https://www.postholer.com/portfolio/index.php?example=serverless){target=_blank}
 
 [Mapscaping on COGS](https://mapscaping.com/complete-guide-to-cloud-optimized-geotiffs/){target=_blank}
+
+[Intro to COGs from Planet](https://developers.planet.com/docs/planetschool/an-introduction-to-cloud-optimized-geotiffs-cogs-part-1-overview/){target=_blank}

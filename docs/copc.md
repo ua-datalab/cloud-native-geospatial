@@ -43,6 +43,23 @@ COPCs are just a special case of `laz`, so any application that can read `laz` c
 QGIS, CloudCompare, Argis Pro, and PDAL can all read COPC
 
 
+
+
+___    
+## Create your own COPC
+
+![blah](https://pdal.io/_images/pdal_logo.png){ width="100" align="right" }
+
+The best toolset to creat your own COPC point clouds is PDAL. [Point Data Abstraction Library (PDAL)](https://pdal.io){target=_blank} is a C++ library for translating and manipulating point cloud data.
+
+??? Tip "Installing Open Source Lidar tools"
+
+    [LASTools](https://rapidlasso.com/lastools/){target=_blank} is available for both open source and a paid licensed version
+
+    [PDAL.io](https://pdal.io/en/stable/download.html#current-release-s){target=_blank} - suggest using a Binary install using a package manager like `conda`.
+
+
+## Entwine Point Tiles
 <a href="https://entwine.io" target="blank" rel="entwine">![entwine](https://entwine.io/_images/entwine_logo_2-color.png){ width="100" } </a>
 
 [Entwine](https://entwine.io){target=_blank} is a data organization library for massive point clouds, designed to conquer datasets of trillions of points as well as desktop-scale point clouds.
@@ -52,23 +69,6 @@ HoBu was contracted by the USGS to process all of the 3DEP lidar data, these are
 * More information about these datasets can be found at https://registry.opendata.aws/usgs-lidar/ and at its GitHub page at https://github.com/hobu/usgs-lidar/
 
 * [USGS National Datasets Downloads](https://www.usgs.gov/faqs/can-national-map-data-be-downloaded-direct-links){target=_blank}
-
-<a href="https://copc.io" target="blank" rel="copc">![copc](https://copc.io/COPC_IO-Logo-2color.png){ width="100" } </a>
-
-
-??? Tip "Installing Open Source Lidar tools"
-
-    [LASTools](https://rapidlasso.com/lastools/){target=_blank} is available for both open source and a paid licensed version
-
-    [PDAL.io](https://pdal.io/en/stable/download.html#current-release-s){target=_blank} - suggest using a Binary install using a package manager like `conda`.
-
-___    
-## Create your own COPC
-
-![blah](https://pdal.io/_images/pdal_logo.png){ width="100" align="right" }
-
-The best toolset to creat your own COPC point clouds is PDAL. [Point Data Abstraction Library (PDAL)](https://pdal.io){target=_blank} is a C++ library for translating and manipulating point cloud data.
-
 
 
 These data were converted from USGS 3DEP EPT data using PDAL `pipeline` 
