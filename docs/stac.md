@@ -31,12 +31,8 @@ Use Case 1: A researcher wants to find all the Sentinel-2 imagery that is availa
 </figure>
 
 
-
 [STAC Spec on GitHub](https://github.com/radiantearth/stac-spec){target=_blank}
 
-The [Radiant Earth STAC Browser](https://radiantearth.github.io/stac-browser/#/){target=_blank} allows users to search, preview, and access these massive geospatial assets hosted over conventional `https://` endpoints and cloud-base object stores (i.e., `s3://` buckets).
-
-[STAC Index](https://stacindex.org/)
 
 There are four components to making a given STAC run. They can be used independently of one another, but most often they are all used together:
 

@@ -28,6 +28,8 @@ Check out this [blog](https://worace.works/2022/02/23/kicking-the-tires-flatgeob
 
 ## [GeoParquet](https://geoparquet.org/){target=_blank}
 
-</br>
+GeoParquet is a geospatial data format that is based on the [Apache Parquet format](https://parquet.apache.org/){target=_blank}. Parquet is a columnar storage format that is designed to be efficient for both reading and writing large datasets. GeoParquet adds support for storing geospatial (i.e., vector data with coordinate information). 
+  
+  </br>
 
 ## [Geopackage](https://www.geopackage.org/){target=_blank}

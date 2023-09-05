@@ -37,10 +37,9 @@ Geospatial data formats are evolving toward being completely cloud-native, meani
 Throughout, we will emphasize Open Science principles such as [FAIR](https://www.go-fair.org/fair-principles/){target=_blank} and [CARE](https://www.gida-global.org/care){target=_blank}, and highlight primarily Open Source tools. 
 
 <br/>
- Helpful skills to have
+### Presentation Slides
 
-* a basic understanding of the [Command Line Interface (UNIX)](https://swcarpentry.github.io/shell-novice/){target=_blank}
-* a basic understanding of [Python3](https://www.geeksforgeeks.org/introduction-to-python3/#:~:text=Python%20is%20a%20high%2Dlevel,them%20readable%20all%20the%20time.){target=_blank}
+This content was delivered at the 2023 Arizona Geographic Information Council meeting in Prescott, AZ in August 2023. Check out the presentation slides [here](https://docs.google.com/presentation/d/1oepKUpMMayO2Qp1APlWHDvRRiiaqcqam5y-KKPhC5V8/edit?usp=sharing){target=_blank}.
 
 ## Let's Use the Cloud!
 

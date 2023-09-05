@@ -23,12 +23,9 @@ nav:
   - SpatioTemporal Asset Catalog: stac.md
   - Cloud Compute: ide.md
   - Jupyter Notebook Examples:
-    - GeoJSON: notebooks/geojson.ipynb
-    - COPC: notebooks/copc.ipynb
     - COG: notebooks/cog.ipynb
     - XArray: notebooks/xarray.ipynb
     - Zarr: notebooks/zarr.ipynb
-    - STAC: notebooks/stac.ipynb
     
 # Configuration
 theme:
