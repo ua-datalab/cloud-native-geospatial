@@ -43,7 +43,7 @@ This content was delivered at the 2023 Arizona Geographic Information Council me
 
 ### Recorded Presentation
 
-<iframe width="810" height="568" src="https://www.youtube.com/embed/dwdwhck-CCo" title="202310XX Jeff CloudNativeGeospatial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="500" height="300" src="https://www.youtube.com/embed/dwdwhck-CCo" title="202310XX Jeff CloudNativeGeospatial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Let's Use the Cloud!
 
