@@ -41,6 +41,10 @@ Throughout, we will emphasize Open Science principles such as [FAIR](https://www
 
 This content was delivered at the 2023 Arizona Geographic Information Council meeting in Prescott, AZ in August 2023. Check out the presentation slides [here](https://docs.google.com/presentation/d/1oepKUpMMayO2Qp1APlWHDvRRiiaqcqam5y-KKPhC5V8/edit?usp=sharing){target=_blank}.
 
+### Recorded Presentation
+
+<iframe width="810" height="568" src="https://www.youtube.com/embed/dwdwhck-CCo" title="202310XX Jeff CloudNativeGeospatial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Let's Use the Cloud!
 
 <img align="right" width="300" height="300" src="images/cloud_graphic.png">
