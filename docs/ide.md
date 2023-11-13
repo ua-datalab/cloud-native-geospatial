@@ -4,10 +4,10 @@ As mentioned in the [introduction](index.md#cloud-compute), cloud computing is a
 
 !!! Success "Advantages of Cloud Computing"
         
-        * With cloud computing, you can avoid the upfront cost and complexity of owning and maintaining your own IT infrastructure
-        * Cloud computing allows groups or individuals to scale up (or down) their operations quickly as their computing needs change
-        * Cloud computing allows users to access their data and applications from anywhere, on any device, at any time
-        * Geospatial in the cloud empowers colleagues to work directly together on the same data, models, and applications. The same way that [Google Docs](https://www.google.com/docs/about/){target=_blank} allows multiple people to work on the same document at the same time
+    * With cloud computing, you can avoid the upfront cost and complexity of owning and maintaining your own IT infrastructure
+    * Cloud computing allows groups or individuals to scale up (or down) their operations quickly as their computing needs change
+    * Cloud computing allows users to access their data and applications from anywhere, on any device, at any time
+    * Geospatial in the cloud empowers colleagues to work directly together on the same data, models, and applications. The same way that [Google Docs](https://www.google.com/docs/about/){target=_blank} allows multiple people to work on the same document at the same time
 
 ___
 
