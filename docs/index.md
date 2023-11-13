@@ -95,7 +95,9 @@ Another effort to improve data sharing is the [SpatioTemporal Asset Catalog (STA
 
 
 !!! Success "Advantages of Cloud Computing"
-        
+
+    Advantages Include:
+    
     * With cloud computing, you can avoid the upfront cost and complexity of owning and maintaining your own IT infrastructure
     * Cloud computing allows groups or individuals to scale up (or down) their operations quickly as their computing needs change
     * Cloud computing allows users to access their data and applications from anywhere, on any device, at any time
