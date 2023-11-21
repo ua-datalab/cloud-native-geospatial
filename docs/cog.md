@@ -224,9 +224,10 @@ gdalinfo --version
 
 Make sure that you're operating on at least `v3.1` of GDAL (current latest `v3.5.1`)
 
-We will be using the [gdal_translate](https://gdal.org/programs/gdal_translate.html#index-0){target=_blank} command to create COGs. The `gdal_translate` command is used to convert raster data between different formats.
+<br/>
 
-COG creation options: https://gdal.org/drivers/raster/cog.html
+We will be using the [gdal_translate](https://gdal.org/programs/gdal_translate.html#index-0){target=_blank} command to create COGS. The `gdal_translate` command is used to convert raster data between different formats. Here is additional documentation on [COG creation options (-co)](https://gdal.org/drivers/raster/cog.html){target=_blank}. 
+
 
 
 
