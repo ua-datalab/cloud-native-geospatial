@@ -215,47 +215,107 @@ The lastest versions of [GDAL](https://gdal.org){target=_blank} (>v3.1) have [CO
     [Docker `osgeo/gdal`](https://hub.docker.com/r/osgeo/gdal){target=_blank} images are maintained on the Docker Hub
 
 
+**1** Download the [example geotif file](https://data.cyverse.org/dav-anon/iplant/home/jgillan/Jeffs_stuff/Bighorn_fire/Planet_satellite_imagery/orthomosaics/planet_6sept2020.tif) from the Cyverse Data Store. The file is a 4-band multispectral satellite image from [Planet](https://www.planet.com/){target=_blank}. It was captured on Sept. 6, 2020 over the city of Tucson, AZ and the Santa Catalina Mountains. The file is 1.59 GB in size.
 
-Open a console and check your `gdal` installation
+**2** Bring it into QGIS to view it.
 
-``` bash
-gdalinfo --version
-```
+![planet](images/planet_6sept2020.png){ width="700" align="center" }
 
-Make sure that you're operating on at least `v3.1` of GDAL (current latest `v3.5.1`)
+**3**  Use gdal to read details of the file
+
+If you managed to install gdal on your local machine, you can run the following command in your terminal:
+
+`gdalinfo planet_6sept2020.tif`
 
 <br/>
 
+If you are using docker, you can run the following command in your terminal:
+
+```docker run --rm -v /Users:/Users ghcr.io/osgeo/gdal:alpine-small-3.8.0 gdalinfo $PWD/planet_6sept2020.tif```
+ 
+ <br/>
+
+**4** Use gdal to create a COG from the sample file
+
 We will be using the [gdal_translate](https://gdal.org/programs/gdal_translate.html#index-0){target=_blank} command to create COGS. The `gdal_translate` command is used to convert raster data between different formats. Here is additional documentation on [COG creation options (-co)](https://gdal.org/drivers/raster/cog.html){target=_blank}. 
 
+<br/>
+for local install:
+
+`gdal_translate -of COG -co COMPRESS=LZW planet_6sept2020.tif planet_6sept2020_COG.tif`
+
+<br/>
+
+If using docker:
+
+`docker run --rm -v /Users:/Users ghcr.io/osgeo/gdal:alpine-small-3.8.0 gdal_translate -of COG -co COMPRESS=LZW $PWD/planet_6sept2020.tif $PWD/planet_6sept2020_COG.tif`
+
+<br/>
+
+**5** Inspect the COG
+
+The new file (2.19GB) should be larger than the original file (1.59GB). This is because the COG has internal tiling and overviews.
+
+Let's look at the details of the new file
+
+`gdalinfo planet_6sept2020_COG.tif`
+
+or 
+
+`docker run --rm -v /Users:/Users ghcr.io/osgeo/gdal:alpine-small-3.8.0 gdalinfo $PWD/planet_6sept2020_COG.tif`
 
 
+Buried in all the metadata are a few lines that tell us that the file is a COG. The layout is stated as 'COG' and 'overviews' are listed for each band. 
 
-``` bash
-gdal_translate p_ndvi_cor.tif p_ndvi_cor_cog.tif \
--b 1 -b 2 -b 3  \
--of COG \
--co TILING_SCHEME=GoogleMapsCompatible \
--co COMPRESS=JPEG \
--co OVERVIEW_QUALITY=100 \
--co QUALITY=100
+```
+ Image Structure Metadata:
+  COMPRESSION=LZW
+  INTERLEAVE=PIXEL
+  LAYOUT=COG
+```
+``` 
+ Band 1 Block=512x512 Type=UInt16, ColorInterp=Gray
+  Min=0.000 Max=8006.000 
+  Minimum=0.000, Maximum=8006.000, Mean=712.188, StdDev=549.828
+  NoData Value=65536
+  Overviews: 9414x7918, 4707x3959, 2353x1979, 1176x989, 588x494, 294x247
 ```
 
-Check the file size of your example file and your output file. Which is larger?
 
-Now, if we want to add overviews to the output `p_ndvi_cor_cog.tif`:
 
-``` bash
-gdaladdo \
-  --config COMPRESS_OVERVIEW JPEG \
-  --config JPEG_QUALITY_OVERVIEW 100 \
-  --config PHOTOMETRIC_OVERVIEW YCBCR \
-  --config INTERLEAVE_OVERVIEW PIXEL \
-  -r average \
-  p_ndvi_cor_cog.tif \
-  2 4 8 16
-```
+## **Use Cyverse to Store and Share Your COG**
 
+### Graphic User Interface (GUI)
+
+* Go to https://de.cyverse.org/
+
+* Login to Cyverse and then go to the Data Store
+
+![](images/data_store.png){ width="600" align="center" }
+
+* Create a new folder
+![](images/folder.png){ width="90" align="center" }
+
+![](images/folder2.png){ width="500" align="center" }
+
+* Go into the new folder
+* Drag and drop the COG into the folder
+* Navigate one folder up
+* Click the 3dot menu to the far right of your new folder and select "Share"
+
+![](images/folder3.png){ width="600" align="center" }
+
+* Type 'anonymous' in the search bar and select the 'anonymous' user. This will make your COG publically available and able to stream out. 
+
+![](images/sharing.png){ width="300" align="center" }
+
+* Once you COG has been uploaded, please click on the 3dot menu to the far right of your COG and select "Public Link"
+
+![](images/public_link.png){ width="200" align="center" }
+
+* Copy the link and paste it into the [CogEO Viewer](https://www.cogeo.org/map/){target=_blank} to view your COG
+
+* Alternatively, you can paste the link into QGIS to stream the COG into the application
 
 ## Additional Resources
 
