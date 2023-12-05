@@ -146,7 +146,8 @@ If you are unfamiliar with QGIS, here are 3 ways to use the open-source program
 
     ```
     docker run --rm -it --name qgis \
-        -v /tmp/.X11-unix:/tmp/.X11-unix  \  
+        -v $(pwd):/data \
+        -v /tmp/.X11-unix:/tmp/.X11-unix \
         -e DISPLAY=unix$DISPLAY \
         qgis/qgis:release-3_34 qgis
     ```    
