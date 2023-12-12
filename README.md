@@ -1,5 +1,5 @@
 # Cloud Native Geospatial
-This repository holds educational material about Cloud Native Geospatial. We cover topics such as formats (COG, COPC, Zarr), cloud computing platforms, and cataloging (STAC). The material is presented in a Github page using the MKDocs material theme. The website is currentely hosted at https://www.gillanscience.com/cloud-native-geospatial/
+This repository holds educational material about Cloud Native Geospatial. We cover topics such as formats (COG, COPC, Zarr), cloud computing platforms, and cataloging (STAC). The material is presented in a Github page using the MKDocs material theme. The website is currentely hosted at https://ua-datalab.github.io/cloud-native-geospatial/
 
 # To Development this Material Locally
 
