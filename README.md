@@ -15,10 +15,21 @@ Download this repo to your local machine
 
 Go to a browser and type `localhost:8000`
 
-## Geospatial Datascience Workshop Ideas (each 1 hour)
+## Geospatial Data Science Workshop Ideas (each 1 hour)
+
+
+
+
+Weekly Workshop
+Day and time? Wednesday 1 pm?
+In-person and on Zoom
+Weaver Science-Engineering Library Room 212
+Start Date? End Date?
+DSI Calendar?
 
 * Intro to Geospatial Data Science in python (tell about important python libraries and show some basic tutorial)
 * Intro to Geospatial Data Science in R (tell about important R packages and show some basic tutorial)
+* Exploring the Data-Rich World of Earth and Environmental Science
 * Cloud Native Introduction and Concepts
 * Cloud Optimized Geotiff (what is it; how to create it using GDAL; how to upload them to Cyverse Data Store and stream out to applications)
 * Cloud optimized geotiff Jupyter Notebook
@@ -35,6 +46,7 @@ Go to a browser and type `localhost:8000`
 * OpenDroneMap and WebODM
 * How to get a drone license and other legal topics
 * Basics of photogrammetry and LiDAR
-* Plan and fly an autonomous drone mission (hands-on) 
+* Plan and fly an autonomous drone mission (hands-on)
+* 
   
   
